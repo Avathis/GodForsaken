@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "GodForsaken",
+			"Path": "..\\Source\\GodForsaken.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "GodForsakenEditor",
+			"Path": "..\\Source\\GodForsakenEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"C:\\GameProjects\\GodForsaken\\GodForsaken\\Source\\GodForsaken\\GodForsaken.Build.cs",
+		"C:\\GameProjects\\GodForsaken\\GodForsaken\\Source\\GodForsaken.Target.cs",
+		"C:\\GameProjects\\GodForsaken\\GodForsaken\\Source\\GodForsakenEditor.Target.cs"
+	],
+	"EngineVersion": "5.3.2"
+}

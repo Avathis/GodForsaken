@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\GodForsaken.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\GodForsaken.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\GodForsakenEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\.vsconfig" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\GodForsaken">
+      <UniqueIdentifier>{030131FB-5093-3E89-9C88-A51E5835C8BE}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\GodForsaken\GodForsaken.Build.cs">
+      <Filter>Source\GodForsaken</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\GodForsaken\GodForsaken.cpp">
+      <Filter>Source\GodForsaken</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GodForsaken\GodForsaken.h">
+      <Filter>Source\GodForsaken</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GodForsaken\GodForsakenCharacter.cpp">
+      <Filter>Source\GodForsaken</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GodForsaken\GodForsakenCharacter.h">
+      <Filter>Source\GodForsaken</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GodForsaken\GodForsakenGameMode.cpp">
+      <Filter>Source\GodForsaken</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GodForsaken\GodForsakenGameMode.h">
+      <Filter>Source\GodForsaken</Filter>
+    </ClInclude>
+    <Filter Include="Source\GodForsaken\Private">
+      <UniqueIdentifier>{4D18B280-AE3D-39A2-AC87-AE265BDE3F62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\GodForsaken\Private\BaseClasses">
+      <UniqueIdentifier>{86249411-79E4-35C7-995B-08AA1650E89F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\GodForsaken\Private\BaseClasses\Characters">
+      <UniqueIdentifier>{2534094A-6526-3BDB-BFC0-9DB69290E59B}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\GodForsaken\Private\BaseClasses\Characters\GFAICharacter.cpp">
+      <Filter>Source\GodForsaken\Private\BaseClasses\Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GodForsaken\Private\BaseClasses\Characters\GFCharacter.cpp">
+      <Filter>Source\GodForsaken\Private\BaseClasses\Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GodForsaken\Private\BaseClasses\Characters\GFPlayableCharacter.cpp">
+      <Filter>Source\GodForsaken\Private\BaseClasses\Characters</Filter>
+    </ClCompile>
+    <Filter Include="Source\GodForsaken\Private\BaseClasses\Components">
+      <UniqueIdentifier>{188F07F7-FA09-3035-ADD9-0C371D9D9843}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\GodForsaken\Private\BaseClasses\Components\GFCharacterMovementComponent.cpp">
+      <Filter>Source\GodForsaken\Private\BaseClasses\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GodForsaken\Private\BaseClasses\Components\GFSpringArmComponent.cpp">
+      <Filter>Source\GodForsaken\Private\BaseClasses\Components</Filter>
+    </ClCompile>
+    <Filter Include="Source\GodForsaken\Private\GameplayAbilitySystem">
+      <UniqueIdentifier>{AA3BD7A9-27FF-3E51-8DC9-3F1653D8AB9E}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\GFAbilitySystemComponent.cpp">
+      <Filter>Source\GodForsaken\Private\GameplayAbilitySystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\GFAttributeSet.cpp">
+      <Filter>Source\GodForsaken\Private\GameplayAbilitySystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\GFGameplayAbility.cpp">
+      <Filter>Source\GodForsaken\Private\GameplayAbilitySystem</Filter>
+    </ClCompile>
+    <Filter Include="Source\GodForsaken\Public">
+      <UniqueIdentifier>{2002DB16-1FED-3C88-A2F5-13B8F457D5E1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\GodForsaken\Public\BaseClasses">
+      <UniqueIdentifier>{1ACBD040-5822-38AD-B461-40D549A61B36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\GodForsaken\Public\BaseClasses\Characters">
+      <UniqueIdentifier>{2D5CC3CA-5241-309B-88BD-58EFF80A3C6C}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\GodForsaken\Public\BaseClasses\Characters\GFAICharacter.h">
+      <Filter>Source\GodForsaken\Public\BaseClasses\Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GodForsaken\Public\BaseClasses\Characters\GFCharacter.h">
+      <Filter>Source\GodForsaken\Public\BaseClasses\Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GodForsaken\Public\BaseClasses\Characters\GFPlayableCharacter.h">
+      <Filter>Source\GodForsaken\Public\BaseClasses\Characters</Filter>
+    </ClInclude>
+    <Filter Include="Source\GodForsaken\Public\BaseClasses\Components">
+      <UniqueIdentifier>{4F8B091D-03EB-38AD-AC0A-53B2CADCA03D}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\GodForsaken\Public\BaseClasses\Components\GFCharacterMovementComponent.h">
+      <Filter>Source\GodForsaken\Public\BaseClasses\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GodForsaken\Public\BaseClasses\Components\GFSpringArmComponent.h">
+      <Filter>Source\GodForsaken\Public\BaseClasses\Components</Filter>
+    </ClInclude>
+    <Filter Include="Source\GodForsaken\Public\GameplayAbilitySystem">
+      <UniqueIdentifier>{E0F8B4D1-B5B9-325D-B14D-C88C550C368B}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\GFAbilitySystemComponent.h">
+      <Filter>Source\GodForsaken\Public\GameplayAbilitySystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\GFAttributeSet.h">
+      <Filter>Source\GodForsaken\Public\GameplayAbilitySystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\GFGameplayAbility.h">
+      <Filter>Source\GodForsaken\Public\GameplayAbilitySystem</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
