@@ -6,19 +6,81 @@
 
 #include "UObject/GeneratedCppIncludes.h"
 #include "GodForsaken/Public/BaseClasses/Characters/GFCharacter.h"
+#include "GameplayTagContainer.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeGFCharacter() {}
 // Cross Module References
+	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UAbilitySystemInterface_NoRegister();
+	GAMEPLAYTAGS_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayTag();
 	GODFORSAKEN_API UClass* Z_Construct_UClass_AGFCharacter();
 	GODFORSAKEN_API UClass* Z_Construct_UClass_AGFCharacter_NoRegister();
 	GODFORSAKEN_API UClass* Z_Construct_UClass_UGFAbilitySystemComponent_NoRegister();
 	GODFORSAKEN_API UClass* Z_Construct_UClass_UGFAttributeSet_NoRegister();
+	GODFORSAKEN_API UClass* Z_Construct_UClass_UGFGameplayAbility_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_GodForsaken();
 // End Cross Module References
+	DEFINE_FUNCTION(AGFCharacter::execGrantAbility)
+	{
+		P_GET_OBJECT(UClass,Z_Param_AbilityClass);
+		P_GET_PROPERTY(FIntProperty,Z_Param_AbilityLevel);
+		P_GET_STRUCT(FGameplayTag,Z_Param_InputTag);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->GrantAbility(Z_Param_AbilityClass,Z_Param_AbilityLevel,Z_Param_InputTag);
+		P_NATIVE_END;
+	}
 	void AGFCharacter::StaticRegisterNativesAGFCharacter()
 	{
+		UClass* Class = AGFCharacter::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "GrantAbility", &AGFCharacter::execGrantAbility },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_AGFCharacter_GrantAbility_Statics
+	{
+		struct GFCharacter_eventGrantAbility_Parms
+		{
+			TSubclassOf<UGFGameplayAbility>  AbilityClass;
+			int32 AbilityLevel;
+			FGameplayTag InputTag;
+		};
+		static const UECodeGen_Private::FClassPropertyParams NewProp_AbilityClass;
+		static const UECodeGen_Private::FIntPropertyParams NewProp_AbilityLevel;
+		static const UECodeGen_Private::FStructPropertyParams NewProp_InputTag;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FClassPropertyParams Z_Construct_UFunction_AGFCharacter_GrantAbility_Statics::NewProp_AbilityClass = { "AbilityClass", nullptr, (EPropertyFlags)0x0014000000000080, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(GFCharacter_eventGrantAbility_Parms, AbilityClass), Z_Construct_UClass_UClass, Z_Construct_UClass_UGFGameplayAbility_NoRegister, METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_AGFCharacter_GrantAbility_Statics::NewProp_AbilityLevel = { "AbilityLevel", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(GFCharacter_eventGrantAbility_Parms, AbilityLevel), METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AGFCharacter_GrantAbility_Statics::NewProp_InputTag = { "InputTag", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(GFCharacter_eventGrantAbility_Parms, InputTag), Z_Construct_UScriptStruct_FGameplayTag, METADATA_PARAMS(0, nullptr) }; // 2083603574
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AGFCharacter_GrantAbility_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AGFCharacter_GrantAbility_Statics::NewProp_AbilityClass,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AGFCharacter_GrantAbility_Statics::NewProp_AbilityLevel,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AGFCharacter_GrantAbility_Statics::NewProp_InputTag,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AGFCharacter_GrantAbility_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Abilities" },
+		{ "ModuleRelativePath", "Public/BaseClasses/Characters/GFCharacter.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AGFCharacter_GrantAbility_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AGFCharacter, nullptr, "GrantAbility", nullptr, nullptr, Z_Construct_UFunction_AGFCharacter_GrantAbility_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AGFCharacter_GrantAbility_Statics::PropPointers), sizeof(Z_Construct_UFunction_AGFCharacter_GrantAbility_Statics::GFCharacter_eventGrantAbility_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AGFCharacter_GrantAbility_Statics::Function_MetaDataParams), Z_Construct_UFunction_AGFCharacter_GrantAbility_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_AGFCharacter_GrantAbility_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_AGFCharacter_GrantAbility_Statics::GFCharacter_eventGrantAbility_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_AGFCharacter_GrantAbility()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AGFCharacter_GrantAbility_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(AGFCharacter);
 	UClass* Z_Construct_UClass_AGFCharacter_NoRegister()
@@ -28,6 +90,7 @@ void EmptyLinkFunctionForGeneratedCodeGFCharacter() {}
 	struct Z_Construct_UClass_AGFCharacter_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -49,6 +112,10 @@ void EmptyLinkFunctionForGeneratedCodeGFCharacter() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_GodForsaken,
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AGFCharacter_Statics::DependentSingletons) < 16);
+	const FClassFunctionLinkInfo Z_Construct_UClass_AGFCharacter_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_AGFCharacter_GrantAbility, "GrantAbility" }, // 1114971667
+	};
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AGFCharacter_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGFCharacter_Statics::Class_MetaDataParams[] = {
 		{ "HideCategories", "Navigation" },
@@ -87,11 +154,11 @@ void EmptyLinkFunctionForGeneratedCodeGFCharacter() {}
 		"Game",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		nullptr,
+		FuncInfo,
 		Z_Construct_UClass_AGFCharacter_Statics::PropPointers,
 		InterfaceParams,
 		UE_ARRAY_COUNT(DependentSingletons),
-		0,
+		UE_ARRAY_COUNT(FuncInfo),
 		UE_ARRAY_COUNT(Z_Construct_UClass_AGFCharacter_Statics::PropPointers),
 		UE_ARRAY_COUNT(InterfaceParams),
 		0x009000A4u,
@@ -117,9 +184,9 @@ void EmptyLinkFunctionForGeneratedCodeGFCharacter() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Characters_GFCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AGFCharacter, AGFCharacter::StaticClass, TEXT("AGFCharacter"), &Z_Registration_Info_UClass_AGFCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGFCharacter), 621371615U) },
+		{ Z_Construct_UClass_AGFCharacter, AGFCharacter::StaticClass, TEXT("AGFCharacter"), &Z_Registration_Info_UClass_AGFCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGFCharacter), 2500185130U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Characters_GFCharacter_h_2396144167(TEXT("/Script/GodForsaken"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Characters_GFCharacter_h_1614741286(TEXT("/Script/GodForsaken"),
 		Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Characters_GFCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Characters_GFCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

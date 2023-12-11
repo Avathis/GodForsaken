@@ -27,7 +27,13 @@ void AGFPlayableCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInpu
 	{
 		if(InputConfig)
 		{
-			
+			EnhancedInputComponent->BindNativeAction(InputConfig, FGameplayTag::RequestGameplayTag(FName("Input.Move")),ETriggerEvent::Triggered, this, &ThisClass::Move,false);
+			EnhancedInputComponent->BindNativeAction(InputConfig, FGameplayTag::RequestGameplayTag(FName("Input.Look")),ETriggerEvent::Triggered, this, &ThisClass::Look,false);
+			EnhancedInputComponent->BindNativeAction(InputConfig, FGameplayTag::RequestGameplayTag(FName("Input.Confirm")),ETriggerEvent::Triggered, this, &ThisClass::Input_Confirm,false);
+			EnhancedInputComponent->BindNativeAction(InputConfig, FGameplayTag::RequestGameplayTag(FName("Input.Cancel")),ETriggerEvent::Triggered, this, &ThisClass::Input_Cancel,false);
+
+			TArray<uint32> BindHandle;
+			EnhancedInputComponent->BindAbilityActions(InputConfig,this,&ThisClass::Input_AbilityInputTagTriggered, BindHandle);
 		}
 	}
 	BindASCInput();
@@ -38,6 +44,14 @@ void AGFPlayableCharacter::BeginPlay()
 	Super::BeginPlay();
  
 	PlayerController = Cast<AGFPlayerController>(GetController());
+
+	if(PlayerController)
+	{
+		if(UEnhancedInputLocalPlayerSubsystem* Subsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(PlayerController->GetLocalPlayer()))
+		{
+			Subsystem->AddMappingContext(DefaultMappingContext, 0);
+		}
+	}
 }
 
 void AGFPlayableCharacter::BindASCInput()

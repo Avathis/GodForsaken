@@ -114,7 +114,9 @@
     <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini"/>
     <None Include="..\..\Config\DefaultEngine.ini"/>
     <None Include="..\..\Config\DefaultGame.ini"/>
+    <None Include="..\..\Config\DefaultGameplayTags.ini"/>
     <None Include="..\..\Config\DefaultInput.ini"/>
+    <None Include="..\..\Config\Tags\InputTags.ini"/>
     <None Include="..\..\Source\GodForsaken\GodForsaken.Build.cs"/>
     <ClCompile Include="..\..\Source\GodForsaken\GodForsaken.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -134,6 +136,11 @@
       <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <ClInclude Include="..\..\Source\GodForsaken\GodForsakenGameMode.h"/>
+    <ClCompile Include="..\..\Source\GodForsaken\Private\BaseClasses\Animation\GFAnimInstance.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
     <ClCompile Include="..\..\Source\GodForsaken\Private\BaseClasses\Characters\GFAICharacter.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
@@ -189,6 +196,7 @@
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
       <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
     </ClCompile>
+    <ClInclude Include="..\..\Source\GodForsaken\Public\BaseClasses\Animation\GFAnimInstance.h"/>
     <ClInclude Include="..\..\Source\GodForsaken\Public\BaseClasses\Characters\GFAICharacter.h"/>
     <ClInclude Include="..\..\Source\GodForsaken\Public\BaseClasses\Characters\GFCharacter.h"/>
     <ClInclude Include="..\..\Source\GodForsaken\Public\BaseClasses\Characters\GFPlayableCharacter.h"/>

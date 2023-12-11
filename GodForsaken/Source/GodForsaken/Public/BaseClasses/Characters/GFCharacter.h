@@ -28,6 +28,7 @@ protected:
 	class UGFAttributeSet* AttributeSet;
 
 private:
+	UFUNCTION(BlueprintCallable, Category = "Abilities")
 	virtual void GrantAbility(TSubclassOf<class UGFGameplayAbility> AbilityClass, int32 AbilityLevel, FGameplayTag InputTag);
 
 public:	

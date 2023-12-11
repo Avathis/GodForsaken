@@ -27,8 +27,17 @@
     <None Include="..\..\Config\DefaultGame.ini">
       <Filter>Config</Filter>
     </None>
+    <None Include="..\..\Config\DefaultGameplayTags.ini">
+      <Filter>Config</Filter>
+    </None>
     <None Include="..\..\Config\DefaultInput.ini">
       <Filter>Config</Filter>
+    </None>
+    <Filter Include="Config\Tags">
+      <UniqueIdentifier>{C23A97B6-B409-38D2-A57B-078A593D2FB3}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\Tags\InputTags.ini">
+      <Filter>Config\Tags</Filter>
     </None>
     <Filter Include="Source\GodForsaken">
       <UniqueIdentifier>{030131FB-5093-3E89-9C88-A51E5835C8BE}</UniqueIdentifier>
@@ -60,6 +69,12 @@
     <Filter Include="Source\GodForsaken\Private\BaseClasses">
       <UniqueIdentifier>{86249411-79E4-35C7-995B-08AA1650E89F}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\GodForsaken\Private\BaseClasses\Animation">
+      <UniqueIdentifier>{C960458B-4C7C-3CC4-AA5E-AEE72EC4EB9D}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\GodForsaken\Private\BaseClasses\Animation\GFAnimInstance.cpp">
+      <Filter>Source\GodForsaken\Private\BaseClasses\Animation</Filter>
+    </ClCompile>
     <Filter Include="Source\GodForsaken\Private\BaseClasses\Characters">
       <UniqueIdentifier>{2534094A-6526-3BDB-BFC0-9DB69290E59B}</UniqueIdentifier>
     </Filter>
@@ -114,6 +129,12 @@
     <Filter Include="Source\GodForsaken\Public\BaseClasses">
       <UniqueIdentifier>{1ACBD040-5822-38AD-B461-40D549A61B36}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\GodForsaken\Public\BaseClasses\Animation">
+      <UniqueIdentifier>{BB78F16F-8161-3E60-88FD-CAFD2FE7A1D2}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\GodForsaken\Public\BaseClasses\Animation\GFAnimInstance.h">
+      <Filter>Source\GodForsaken\Public\BaseClasses\Animation</Filter>
+    </ClInclude>
     <Filter Include="Source\GodForsaken\Public\BaseClasses\Characters">
       <UniqueIdentifier>{2D5CC3CA-5241-309B-88BD-58EFF80A3C6C}</UniqueIdentifier>
     </Filter>
