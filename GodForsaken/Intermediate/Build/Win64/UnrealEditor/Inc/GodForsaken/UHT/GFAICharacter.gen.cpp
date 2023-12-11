@@ -76,7 +76,7 @@ void EmptyLinkFunctionForGeneratedCodeGFAICharacter() {}
 	{
 		return AGFAICharacter::StaticClass();
 	}
-	AGFAICharacter::AGFAICharacter() {}
+	AGFAICharacter::AGFAICharacter(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AGFAICharacter);
 	AGFAICharacter::~AGFAICharacter() {}
 	struct Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Characters_GFAICharacter_h_Statics
@@ -84,9 +84,9 @@ void EmptyLinkFunctionForGeneratedCodeGFAICharacter() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Characters_GFAICharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AGFAICharacter, AGFAICharacter::StaticClass, TEXT("AGFAICharacter"), &Z_Registration_Info_UClass_AGFAICharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGFAICharacter), 2209196758U) },
+		{ Z_Construct_UClass_AGFAICharacter, AGFAICharacter::StaticClass, TEXT("AGFAICharacter"), &Z_Registration_Info_UClass_AGFAICharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGFAICharacter), 2886274896U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Characters_GFAICharacter_h_2520123340(TEXT("/Script/GodForsaken"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Characters_GFAICharacter_h_1410443098(TEXT("/Script/GodForsaken"),
 		Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Characters_GFAICharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Characters_GFAICharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

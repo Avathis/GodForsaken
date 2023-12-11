@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\gameprojects\\godforsaken\\godforsaken\\intermediate\\build\\win64\\unrealeditor\\inc\\godforsaken\\uht\\gfplayercontroller.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\gameprojects\\godforsaken\\godforsaken\\intermediate\\build\\win64\\x64\\godforsakeneditor\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\gameprojects\\godforsaken\\godforsaken\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\godforsaken\\definitions.godforsaken.h",
+            "c:\\gameprojects\\godforsaken\\godforsaken\\source\\godforsaken\\public\\player\\gfplayercontroller.h",
+            "c:\\gameprojects\\godforsaken\\godforsaken\\intermediate\\build\\win64\\unrealeditor\\inc\\godforsaken\\uht\\gfplayercontroller.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

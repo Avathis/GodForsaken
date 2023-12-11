@@ -2,4 +2,127 @@
 
 
 #include "BaseClasses/Characters/GFPlayableCharacter.h"
+#include "BaseClasses/Components/GFSpringArmComponent.h"
+#include "Camera/CameraComponent.h"
+#include "BaseClasses/Input/GFEnhancedInputComponent.h"
+#include "EnhancedInputSubsystems.h"
+#include "BaseClasses/Components/GFCharacterMovementComponent.h"
+#include "Player/GFPlayerController.h"
 
+AGFPlayableCharacter::AGFPlayableCharacter(const FObjectInitializer& ObjectInitializer) :Super(ObjectInitializer.SetDefaultSubobjectClass<UGFCharacterMovementComponent>(ACharacter::CharacterMovementComponentName))
+{
+	SpringArmComponent = CreateDefaultSubobject<UGFSpringArmComponent>(TEXT("SpringArm"));
+	SpringArmComponent->SetupAttachment(GetRootComponent());
+	CameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
+	CameraComponent->SetupAttachment(SpringArmComponent);
+	CineCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("CinematicCamera"));
+	CineCamera->SetupAttachment(GetRootComponent());
+}
+
+void AGFPlayableCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
+{
+	Super::SetupPlayerInputComponent(PlayerInputComponent);
+
+	if(UGFEnhancedInputComponent* EnhancedInputComponent= CastChecked<UGFEnhancedInputComponent>(PlayerInputComponent))
+	{
+		if(InputConfig)
+		{
+			
+		}
+	}
+	BindASCInput();
+}
+
+void AGFPlayableCharacter::BeginPlay()
+{
+	Super::BeginPlay();
+ 
+	PlayerController = Cast<AGFPlayerController>(GetController());
+}
+
+void AGFPlayableCharacter::BindASCInput()
+{
+	if (!ASCInputBound && AbilitySystemComponent && IsValid(InputComponent))
+	{
+		//AbilitySystemComponent->BindAbilityActivationToInputComponent(InputComponent,FGameplayAbilityInputBinds(FString("ConfirmTarget"), FString("CancelTarget"), FString("GBAbilityInputID"), static_cast<int32>(GBAbilityInputID::Confirm), static_cast<int32>(GBAbilityInputID::Cancel)));
+
+		ASCInputBound = true;
+	}
+}
+
+void AGFPlayableCharacter::Input_AbilityInputTagPressed(FGameplayTag InputTag)
+{
+	if (UGFAbilitySystemComponent* ASC = GetAbilitySystemComponent())
+	{
+		ASC->AbilityInputTagPressed(InputTag);
+	}
+}
+
+void AGFPlayableCharacter::Input_AbilityInputTagReleased(FGameplayTag InputTag)
+{
+	if (UGFAbilitySystemComponent* ASC = GetAbilitySystemComponent())
+	{
+		ASC->AbilityInputTagReleased(InputTag);
+	}
+}
+
+void AGFPlayableCharacter::Input_AbilityInputTagTriggered(const FInputActionInstance& InputActionInstance)
+{
+	if (UGFAbilitySystemComponent* ASC = GetAbilitySystemComponent())
+	{
+		const UInputAction* InputAction = Cast<UInputAction>(InputActionInstance.GetSourceAction());
+
+		const FGameplayTag InputTag = InputConfig->FindInputTagForAbilityInputAction(InputAction);
+
+		if (InputTag.IsValid())
+		{
+			const FInputActionValue InputActionValue = InputActionInstance.GetValue();
+			if (InputActionValue.Get<bool>())
+			{
+				ASC->AbilityInputTagPressed(InputTag);
+			}
+			else
+			{
+				ASC->AbilityInputTagReleased(InputTag);
+			}
+		}
+	}
+}
+
+void AGFPlayableCharacter::Input_Confirm(const FInputActionInstance& InputActionInstance)
+{
+	if(UGFAbilitySystemComponent* ASC = GetAbilitySystemComponent())
+	{
+		ASC->LocalInputConfirm();
+	}
+}
+
+void AGFPlayableCharacter::Input_Cancel(const FInputActionInstance& InputActionInstance)
+{
+	if(UGFAbilitySystemComponent* ASC = GetAbilitySystemComponent())
+	{
+		ASC->LocalInputCancel();
+	}
+}
+
+void AGFPlayableCharacter::Move(const FInputActionValue& Value)
+{
+	const FVector2d CurrentValue = Value.Get<FVector2d>();
+	const FRotator Rotation = PlayerController->GetControlRotation();
+	const FRotator YawRotation(0.f, Rotation.Yaw, 0.f);
+	
+	const FVector ForwardDirection = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X);
+	AddMovementInput(ForwardDirection, CurrentValue.Y);
+	const FVector RightDirection = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Y);
+	AddMovementInput(RightDirection, CurrentValue.X);
+}
+
+void AGFPlayableCharacter::Look(const FInputActionValue& Value)
+{
+	const FVector2d LookAxisValue = Value.Get<FVector2d>();
+	if(PlayerController)
+	{
+		AddControllerYawInput(LookAxisValue.X);
+		AddControllerPitchInput(LookAxisValue.Y);
+	}
+}

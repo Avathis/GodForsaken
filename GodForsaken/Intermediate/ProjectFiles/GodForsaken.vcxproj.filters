@@ -81,6 +81,15 @@
     <ClCompile Include="..\..\Source\GodForsaken\Private\BaseClasses\Components\GFSpringArmComponent.cpp">
       <Filter>Source\GodForsaken\Private\BaseClasses\Components</Filter>
     </ClCompile>
+    <Filter Include="Source\GodForsaken\Private\BaseClasses\Input">
+      <UniqueIdentifier>{5D0233F7-D27C-3FDD-B5AD-DA08DE6E8C47}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\GodForsaken\Private\BaseClasses\Input\GFEnhancedInputComponent.cpp">
+      <Filter>Source\GodForsaken\Private\BaseClasses\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GodForsaken\Private\BaseClasses\Input\GFInputConfig.cpp">
+      <Filter>Source\GodForsaken\Private\BaseClasses\Input</Filter>
+    </ClCompile>
     <Filter Include="Source\GodForsaken\Private\GameplayAbilitySystem">
       <UniqueIdentifier>{AA3BD7A9-27FF-3E51-8DC9-3F1653D8AB9E}</UniqueIdentifier>
     </Filter>
@@ -92,6 +101,12 @@
     </ClCompile>
     <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\GFGameplayAbility.cpp">
       <Filter>Source\GodForsaken\Private\GameplayAbilitySystem</Filter>
+    </ClCompile>
+    <Filter Include="Source\GodForsaken\Private\Player">
+      <UniqueIdentifier>{6D3E8C82-17B1-3404-95D6-CABDB82F5DF6}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\GodForsaken\Private\Player\GFPlayerController.cpp">
+      <Filter>Source\GodForsaken\Private\Player</Filter>
     </ClCompile>
     <Filter Include="Source\GodForsaken\Public">
       <UniqueIdentifier>{2002DB16-1FED-3C88-A2F5-13B8F457D5E1}</UniqueIdentifier>
@@ -120,6 +135,15 @@
     <ClInclude Include="..\..\Source\GodForsaken\Public\BaseClasses\Components\GFSpringArmComponent.h">
       <Filter>Source\GodForsaken\Public\BaseClasses\Components</Filter>
     </ClInclude>
+    <Filter Include="Source\GodForsaken\Public\BaseClasses\Input">
+      <UniqueIdentifier>{66BD4669-AE64-37EF-9798-D8B14EB9ED9E}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\GodForsaken\Public\BaseClasses\Input\GFEnhancedInputComponent.h">
+      <Filter>Source\GodForsaken\Public\BaseClasses\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GodForsaken\Public\BaseClasses\Input\GFInputConfig.h">
+      <Filter>Source\GodForsaken\Public\BaseClasses\Input</Filter>
+    </ClInclude>
     <Filter Include="Source\GodForsaken\Public\GameplayAbilitySystem">
       <UniqueIdentifier>{E0F8B4D1-B5B9-325D-B14D-C88C550C368B}</UniqueIdentifier>
     </Filter>
@@ -131,6 +155,12 @@
     </ClInclude>
     <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\GFGameplayAbility.h">
       <Filter>Source\GodForsaken\Public\GameplayAbilitySystem</Filter>
+    </ClInclude>
+    <Filter Include="Source\GodForsaken\Public\Player">
+      <UniqueIdentifier>{BFF85DF2-F7B8-3A44-BB2F-39BDD858AC71}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\GodForsaken\Public\Player\GFPlayerController.h">
+      <Filter>Source\GodForsaken\Public\Player</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

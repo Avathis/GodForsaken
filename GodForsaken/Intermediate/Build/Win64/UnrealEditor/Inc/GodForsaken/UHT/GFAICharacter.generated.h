@@ -30,7 +30,7 @@ public: \
 
 #define FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Characters_GFAICharacter_h_15_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API AGFAICharacter(); \
+	NO_API AGFAICharacter(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AGFAICharacter(AGFAICharacter&&); \
@@ -38,7 +38,7 @@ private: \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, AGFAICharacter); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AGFAICharacter); \
-	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AGFAICharacter) \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AGFAICharacter) \
 	NO_API virtual ~AGFAICharacter();
 
 

@@ -3,19 +3,46 @@
 
 #include "BaseClasses/Characters/GFCharacter.h"
 
+#include "BaseClasses/Components/GFCharacterMovementComponent.h"
+#include "GameplayAbilitySystem/GFGameplayAbility.h"
+
 // Sets default values
-AGFCharacter::AGFCharacter()
+AGFCharacter::AGFCharacter(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer.SetDefaultSubobjectClass<UGFCharacterMovementComponent>(ACharacter::CharacterMovementComponentName))
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+	AbilitySystemComponent = CreateDefaultSubobject<UGFAbilitySystemComponent>(TEXT("ASC"));
+
+	
+	
 }
 
 // Called when the game starts or when spawned
 void AGFCharacter::BeginPlay()
 {
 	Super::BeginPlay();
+
+	AbilitySystemComponent->InitAbilityActorInfo(this, this);
 	
+}
+
+void AGFCharacter::GrantAbility(TSubclassOf<UGFGameplayAbility> AbilityClass, int32 AbilityLevel, FGameplayTag InputTag)
+{
+	if(GetLocalRole() == ROLE_Authority && AbilitySystemComponent && IsValid(AbilityClass))
+	{
+		UGFGameplayAbility* Ability = AbilityClass->GetDefaultObject<UGFGameplayAbility>();
+		if(IsValid(Ability))
+		{
+			FGameplayAbilitySpec AbilitySpec(Ability,AbilityLevel);
+			if(InputTag.IsValid())
+			{
+				AbilitySpec.DynamicAbilityTags.AddTag(InputTag);
+			}
+			AbilitySystemComponent->GiveAbility(AbilitySpec);
+		}
+		
+	}
 }
 
 // Called every frame
