@@ -21,6 +21,23 @@ struct FGameplayTag;
 #define FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Characters_GFCharacter_h_14_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Characters_GFCharacter_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execGetMaxSpeed); \
+	DECLARE_FUNCTION(execGetSpeed); \
+	DECLARE_FUNCTION(execGetSpecialPercentage); \
+	DECLARE_FUNCTION(execGetEnergyPercentage); \
+	DECLARE_FUNCTION(execGetStaminaPercentage); \
+	DECLARE_FUNCTION(execGetHealthPercentage); \
+	DECLARE_FUNCTION(execGetMaxSpecial); \
+	DECLARE_FUNCTION(execGetSpecial); \
+	DECLARE_FUNCTION(execGetStaminaRegenRate); \
+	DECLARE_FUNCTION(execGetMaxStamina); \
+	DECLARE_FUNCTION(execGetStamina); \
+	DECLARE_FUNCTION(execGetEnergyRegenRate); \
+	DECLARE_FUNCTION(execGetMaxEnergy); \
+	DECLARE_FUNCTION(execGetEnergy); \
+	DECLARE_FUNCTION(execGetHealthRegenRate); \
+	DECLARE_FUNCTION(execGetMaxHealth); \
+	DECLARE_FUNCTION(execGetHealth); \
 	DECLARE_FUNCTION(execGrantAbility);
 
 

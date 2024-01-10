@@ -12,6 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <None Include="..\..\.vsconfig" />
+    <None Include="..\..\Fighter_Animations.png" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -123,6 +124,12 @@
     <ClCompile Include="..\..\Source\GodForsaken\Private\Player\GFPlayerController.cpp">
       <Filter>Source\GodForsaken\Private\Player</Filter>
     </ClCompile>
+    <Filter Include="Source\GodForsaken\Private\UI">
+      <UniqueIdentifier>{27863662-484C-3EF1-8966-AB62D476092B}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\GodForsaken\Private\UI\GFCharacterWidget.cpp">
+      <Filter>Source\GodForsaken\Private\UI</Filter>
+    </ClCompile>
     <Filter Include="Source\GodForsaken\Public">
       <UniqueIdentifier>{2002DB16-1FED-3C88-A2F5-13B8F457D5E1}</UniqueIdentifier>
     </Filter>
@@ -182,6 +189,12 @@
     </Filter>
     <ClInclude Include="..\..\Source\GodForsaken\Public\Player\GFPlayerController.h">
       <Filter>Source\GodForsaken\Public\Player</Filter>
+    </ClInclude>
+    <Filter Include="Source\GodForsaken\Public\UI">
+      <UniqueIdentifier>{7A18120D-4722-3A5B-A65A-9E565D3C9C87}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\GodForsaken\Public\UI\GFCharacterWidget.h">
+      <Filter>Source\GodForsaken\Public\UI</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

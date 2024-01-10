@@ -1,0 +1,39 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.GodForsaken.cpp.obj": [
+			"GFAbilitySystemComponent.gen.cpp.obj",
+			"GFAnimInstance.gen.cpp.obj",
+			"GFCharacterMovementComponent.gen.cpp.obj",
+			"GFCharacterWidget.gen.cpp.obj",
+			"GFEnhancedInputComponent.gen.cpp.obj",
+			"GFGameplayAbility.gen.cpp.obj",
+			"GFInputConfig.gen.cpp.obj",
+			"GFPlayerController.gen.cpp.obj",
+			"GFSpringArmComponent.gen.cpp.obj",
+			"GodForsakenCharacter.gen.cpp.obj",
+			"GodForsakenGameMode.gen.cpp.obj",
+			"GodForsaken.cpp.obj",
+			"GodForsakenCharacter.cpp.obj",
+			"GodForsakenGameMode.cpp.obj",
+			"GFAnimInstance.cpp.obj",
+			"GFAICharacter.cpp.obj",
+			"GFPlayableCharacter.cpp.obj",
+			"GFCharacterMovementComponent.cpp.obj",
+			"GFSpringArmComponent.cpp.obj",
+			"GFEnhancedInputComponent.cpp.obj",
+			"GFInputConfig.cpp.obj",
+			"GFAbilitySystemComponent.cpp.obj",
+			"GFGameplayAbility.cpp.obj",
+			"GFPlayerController.cpp.obj",
+			"GFAICharacter.gen.cpp.obj",
+			"GFAttributeSet.gen.cpp.obj",
+			"GFCharacter.gen.cpp.obj",
+			"GFPlayableCharacter.gen.cpp.obj",
+			"GodForsaken.init.gen.cpp.obj",
+			"GFCharacter.cpp.obj",
+			"GFAttributeSet.cpp.obj",
+			"GFCharacterWidget.cpp.obj"
+		]
+	}
+}
