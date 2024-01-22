@@ -2,7 +2,7 @@
 
 
 #include "BaseClasses/Characters/GFCharacter.h"
-
+#include "MotionWarpingComponent.h"
 #include "BaseClasses/Components/GFCharacterMovementComponent.h"
 #include "Components/WidgetComponent.h"
 #include "GameplayAbilitySystem/GFAttributeSet.h"
@@ -16,6 +16,8 @@ AGFCharacter::AGFCharacter(const FObjectInitializer& ObjectInitializer) : Super(
 	PrimaryActorTick.bCanEverTick = true;
 
 	AbilitySystemComponent = CreateDefaultSubobject<UGFAbilitySystemComponent>(TEXT("ASC"));
+
+	MotionWarpingComponent = CreateDefaultSubobject<UMotionWarpingComponent>(TEXT("MotionWarpingComponent"));
 
 	CharacterStatusBar = CreateDefaultSubobject<UWidgetComponent>(TEXT("Widget"));
 	CharacterStatusBar->SetupAttachment(GetRootComponent());

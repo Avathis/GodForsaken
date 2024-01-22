@@ -37,6 +37,12 @@
     <Filter Include="Config\Tags">
       <UniqueIdentifier>{C23A97B6-B409-38D2-A57B-078A593D2FB3}</UniqueIdentifier>
     </Filter>
+    <None Include="..\..\Config\Tags\GameplayAbility.ini">
+      <Filter>Config\Tags</Filter>
+    </None>
+    <None Include="..\..\Config\Tags\GameplayCues.ini">
+      <Filter>Config\Tags</Filter>
+    </None>
     <None Include="..\..\Config\Tags\InputTags.ini">
       <Filter>Config\Tags</Filter>
     </None>
@@ -74,6 +80,9 @@
       <UniqueIdentifier>{C960458B-4C7C-3CC4-AA5E-AEE72EC4EB9D}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\GodForsaken\Private\BaseClasses\Animation\GFAnimInstance.cpp">
+      <Filter>Source\GodForsaken\Private\BaseClasses\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GodForsaken\Private\BaseClasses\Animation\GFAnimNotify_GameplayCue.cpp">
       <Filter>Source\GodForsaken\Private\BaseClasses\Animation</Filter>
     </ClCompile>
     <Filter Include="Source\GodForsaken\Private\BaseClasses\Characters">
@@ -118,6 +127,12 @@
     <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\GFGameplayAbility.cpp">
       <Filter>Source\GodForsaken\Private\GameplayAbilitySystem</Filter>
     </ClCompile>
+    <Filter Include="Source\GodForsaken\Private\GameplayAbilitySystem\AbilityTasks">
+      <UniqueIdentifier>{63BF7C7C-30F0-336B-8687-346A9625FF15}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\AbilityTasks\GFTargetingTask_AOE.cpp">
+      <Filter>Source\GodForsaken\Private\GameplayAbilitySystem\AbilityTasks</Filter>
+    </ClCompile>
     <Filter Include="Source\GodForsaken\Private\Player">
       <UniqueIdentifier>{6D3E8C82-17B1-3404-95D6-CABDB82F5DF6}</UniqueIdentifier>
     </Filter>
@@ -140,6 +155,9 @@
       <UniqueIdentifier>{BB78F16F-8161-3E60-88FD-CAFD2FE7A1D2}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\GodForsaken\Public\BaseClasses\Animation\GFAnimInstance.h">
+      <Filter>Source\GodForsaken\Public\BaseClasses\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GodForsaken\Public\BaseClasses\Animation\GFAnimNotify_GameplayCue.h">
       <Filter>Source\GodForsaken\Public\BaseClasses\Animation</Filter>
     </ClInclude>
     <Filter Include="Source\GodForsaken\Public\BaseClasses\Characters">
@@ -183,6 +201,12 @@
     </ClInclude>
     <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\GFGameplayAbility.h">
       <Filter>Source\GodForsaken\Public\GameplayAbilitySystem</Filter>
+    </ClInclude>
+    <Filter Include="Source\GodForsaken\Public\GameplayAbilitySystem\AbilityTasks">
+      <UniqueIdentifier>{5B972E3D-C55C-3DAF-835D-7D6E4E292F43}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\AbilityTasks\GFTargetingTask_AOE.h">
+      <Filter>Source\GodForsaken\Public\GameplayAbilitySystem\AbilityTasks</Filter>
     </ClInclude>
     <Filter Include="Source\GodForsaken\Public\Player">
       <UniqueIdentifier>{BFF85DF2-F7B8-3A44-BB2F-39BDD858AC71}</UniqueIdentifier>

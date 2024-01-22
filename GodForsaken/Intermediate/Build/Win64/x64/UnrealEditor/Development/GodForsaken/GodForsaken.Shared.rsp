@@ -263,9 +263,13 @@
 /I "..\Plugins\Runtime\DataRegistry\Source\DataRegistry\Public"
 /I "..\Plugins\EnhancedInput\Intermediate\Build\Win64\UnrealEditor\Inc\EnhancedInput\UHT"
 /I "..\Plugins\EnhancedInput\Source\EnhancedInput\Public"
+/I "..\Plugins\Experimental\GameplayTargetingSystem\Intermediate\Build\Win64\UnrealEditor\Inc\TargetingSystem\UHT"
+/I "..\Plugins\Experimental\GameplayTargetingSystem\Source\GameplayTargetingSystem"
 /I "C:\GameProjects\GodForsaken\GodForsaken\Intermediate\Build\Win64\UnrealEditor\Inc\GodForsaken\UHT"
 /I "C:\GameProjects\GodForsaken\GodForsaken\Source"
 /I "C:\GameProjects\GodForsaken\GodForsaken\Source\GodForsaken\Public"
+/I "..\Plugins\Animation\MotionWarping\Intermediate\Build\Win64\UnrealEditor\Inc\MotionWarping\UHT"
+/I "..\Plugins\Animation\MotionWarping\Source\MotionWarping\Public"
 /external:W0
 /external:I "ThirdParty\mimalloc\include"
 /external:I "ThirdParty\LibTiff\Source\Win64"

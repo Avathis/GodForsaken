@@ -19,6 +19,7 @@ void EmptyLinkFunctionForGeneratedCodeGFCharacter() {}
 	GODFORSAKEN_API UClass* Z_Construct_UClass_UGFAbilitySystemComponent_NoRegister();
 	GODFORSAKEN_API UClass* Z_Construct_UClass_UGFAttributeSet_NoRegister();
 	GODFORSAKEN_API UClass* Z_Construct_UClass_UGFGameplayAbility_NoRegister();
+	MOTIONWARPING_API UClass* Z_Construct_UClass_UMotionWarpingComponent_NoRegister();
 	UMG_API UClass* Z_Construct_UClass_UWidgetComponent_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_GodForsaken();
 // End Cross Module References
@@ -844,6 +845,10 @@ void EmptyLinkFunctionForGeneratedCodeGFCharacter() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_CharacterStatusBar_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_CharacterStatusBar;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_MotionWarpingComponent_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_MotionWarpingComponent;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
@@ -910,10 +915,19 @@ void EmptyLinkFunctionForGeneratedCodeGFCharacter() {}
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGFCharacter_Statics::NewProp_CharacterStatusBar = { "CharacterStatusBar", nullptr, (EPropertyFlags)0x001000000008000d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGFCharacter, CharacterStatusBar), Z_Construct_UClass_UWidgetComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AGFCharacter_Statics::NewProp_CharacterStatusBar_MetaData), Z_Construct_UClass_AGFCharacter_Statics::NewProp_CharacterStatusBar_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGFCharacter_Statics::NewProp_MotionWarpingComponent_MetaData[] = {
+		{ "Category", "Components" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/BaseClasses/Characters/GFCharacter.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGFCharacter_Statics::NewProp_MotionWarpingComponent = { "MotionWarpingComponent", nullptr, (EPropertyFlags)0x001000000008000d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGFCharacter, MotionWarpingComponent), Z_Construct_UClass_UMotionWarpingComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AGFCharacter_Statics::NewProp_MotionWarpingComponent_MetaData), Z_Construct_UClass_AGFCharacter_Statics::NewProp_MotionWarpingComponent_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AGFCharacter_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGFCharacter_Statics::NewProp_AbilitySystemComponent,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGFCharacter_Statics::NewProp_AttributeSet,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGFCharacter_Statics::NewProp_CharacterStatusBar,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGFCharacter_Statics::NewProp_MotionWarpingComponent,
 	};
 		const UECodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_AGFCharacter_Statics::InterfaceParams[] = {
 			{ Z_Construct_UClass_UAbilitySystemInterface_NoRegister, (int32)VTABLE_OFFSET(AGFCharacter, IAbilitySystemInterface), false },  // 3195502011
@@ -957,9 +971,9 @@ void EmptyLinkFunctionForGeneratedCodeGFCharacter() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Characters_GFCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AGFCharacter, AGFCharacter::StaticClass, TEXT("AGFCharacter"), &Z_Registration_Info_UClass_AGFCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGFCharacter), 2039271963U) },
+		{ Z_Construct_UClass_AGFCharacter, AGFCharacter::StaticClass, TEXT("AGFCharacter"), &Z_Registration_Info_UClass_AGFCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGFCharacter), 1514792619U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Characters_GFCharacter_h_237115220(TEXT("/Script/GodForsaken"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Characters_GFCharacter_h_1133991796(TEXT("/Script/GodForsaken"),
 		Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Characters_GFCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Characters_GFCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

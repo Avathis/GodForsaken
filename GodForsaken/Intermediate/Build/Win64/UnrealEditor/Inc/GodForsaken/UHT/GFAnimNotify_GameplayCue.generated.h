@@ -1,0 +1,107 @@
+// Copyright Epic Games, Inc. All Rights Reserved.
+/*===========================================================================
+	Generated code exported from UnrealHeaderTool.
+	DO NOT modify this manually! Edit the corresponding .h files instead!
+===========================================================================*/
+
+// IWYU pragma: private, include "BaseClasses/Animation/GFAnimNotify_GameplayCue.h"
+#include "UObject/ObjectMacros.h"
+#include "UObject/ScriptMacros.h"
+
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+#ifdef GODFORSAKEN_GFAnimNotify_GameplayCue_generated_h
+#error "GFAnimNotify_GameplayCue.generated.h already included, missing '#pragma once' in GFAnimNotify_GameplayCue.h"
+#endif
+#define GODFORSAKEN_GFAnimNotify_GameplayCue_generated_h
+
+#define FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Animation_GFAnimNotify_GameplayCue_h_18_SPARSE_DATA
+#define FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Animation_GFAnimNotify_GameplayCue_h_18_SPARSE_DATA_PROPERTY_ACCESSORS
+#define FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Animation_GFAnimNotify_GameplayCue_h_18_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
+#define FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Animation_GFAnimNotify_GameplayCue_h_18_RPC_WRAPPERS_NO_PURE_DECLS
+#define FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Animation_GFAnimNotify_GameplayCue_h_18_ACCESSORS
+#define FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Animation_GFAnimNotify_GameplayCue_h_18_INCLASS_NO_PURE_DECLS \
+private: \
+	static void StaticRegisterNativesUGFAnimNotify_GameplayCue(); \
+	friend struct Z_Construct_UClass_UGFAnimNotify_GameplayCue_Statics; \
+public: \
+	DECLARE_CLASS(UGFAnimNotify_GameplayCue, UAnimNotify, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/GodForsaken"), NO_API) \
+	DECLARE_SERIALIZER(UGFAnimNotify_GameplayCue)
+
+
+#define FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Animation_GFAnimNotify_GameplayCue_h_18_ENHANCED_CONSTRUCTORS \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	NO_API UGFAnimNotify_GameplayCue(UGFAnimNotify_GameplayCue&&); \
+	NO_API UGFAnimNotify_GameplayCue(const UGFAnimNotify_GameplayCue&); \
+public: \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UGFAnimNotify_GameplayCue); \
+	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UGFAnimNotify_GameplayCue); \
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UGFAnimNotify_GameplayCue) \
+	NO_API virtual ~UGFAnimNotify_GameplayCue();
+
+
+#define FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Animation_GFAnimNotify_GameplayCue_h_15_PROLOG
+#define FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Animation_GFAnimNotify_GameplayCue_h_18_GENERATED_BODY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Animation_GFAnimNotify_GameplayCue_h_18_SPARSE_DATA \
+	FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Animation_GFAnimNotify_GameplayCue_h_18_SPARSE_DATA_PROPERTY_ACCESSORS \
+	FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Animation_GFAnimNotify_GameplayCue_h_18_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS \
+	FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Animation_GFAnimNotify_GameplayCue_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Animation_GFAnimNotify_GameplayCue_h_18_ACCESSORS \
+	FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Animation_GFAnimNotify_GameplayCue_h_18_INCLASS_NO_PURE_DECLS \
+	FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Animation_GFAnimNotify_GameplayCue_h_18_ENHANCED_CONSTRUCTORS \
+private: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+template<> GODFORSAKEN_API UClass* StaticClass<class UGFAnimNotify_GameplayCue>();
+
+#define FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Animation_GFAnimNotify_GameplayCue_h_51_SPARSE_DATA
+#define FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Animation_GFAnimNotify_GameplayCue_h_51_SPARSE_DATA_PROPERTY_ACCESSORS
+#define FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Animation_GFAnimNotify_GameplayCue_h_51_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
+#define FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Animation_GFAnimNotify_GameplayCue_h_51_RPC_WRAPPERS_NO_PURE_DECLS
+#define FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Animation_GFAnimNotify_GameplayCue_h_51_ACCESSORS
+#define FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Animation_GFAnimNotify_GameplayCue_h_51_INCLASS_NO_PURE_DECLS \
+private: \
+	static void StaticRegisterNativesUGFAnimNotify_GameplayCueState(); \
+	friend struct Z_Construct_UClass_UGFAnimNotify_GameplayCueState_Statics; \
+public: \
+	DECLARE_CLASS(UGFAnimNotify_GameplayCueState, UAnimNotifyState, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/GodForsaken"), NO_API) \
+	DECLARE_SERIALIZER(UGFAnimNotify_GameplayCueState)
+
+
+#define FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Animation_GFAnimNotify_GameplayCue_h_51_ENHANCED_CONSTRUCTORS \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	NO_API UGFAnimNotify_GameplayCueState(UGFAnimNotify_GameplayCueState&&); \
+	NO_API UGFAnimNotify_GameplayCueState(const UGFAnimNotify_GameplayCueState&); \
+public: \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UGFAnimNotify_GameplayCueState); \
+	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UGFAnimNotify_GameplayCueState); \
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UGFAnimNotify_GameplayCueState) \
+	NO_API virtual ~UGFAnimNotify_GameplayCueState();
+
+
+#define FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Animation_GFAnimNotify_GameplayCue_h_48_PROLOG
+#define FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Animation_GFAnimNotify_GameplayCue_h_51_GENERATED_BODY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Animation_GFAnimNotify_GameplayCue_h_51_SPARSE_DATA \
+	FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Animation_GFAnimNotify_GameplayCue_h_51_SPARSE_DATA_PROPERTY_ACCESSORS \
+	FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Animation_GFAnimNotify_GameplayCue_h_51_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS \
+	FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Animation_GFAnimNotify_GameplayCue_h_51_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Animation_GFAnimNotify_GameplayCue_h_51_ACCESSORS \
+	FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Animation_GFAnimNotify_GameplayCue_h_51_INCLASS_NO_PURE_DECLS \
+	FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Animation_GFAnimNotify_GameplayCue_h_51_ENHANCED_CONSTRUCTORS \
+private: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+template<> GODFORSAKEN_API UClass* StaticClass<class UGFAnimNotify_GameplayCueState>();
+
+#undef CURRENT_FILE_ID
+#define CURRENT_FILE_ID FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Animation_GFAnimNotify_GameplayCue_h
+
+
+PRAGMA_ENABLE_DEPRECATION_WARNINGS

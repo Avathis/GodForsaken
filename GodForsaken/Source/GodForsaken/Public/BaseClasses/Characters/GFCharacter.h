@@ -63,6 +63,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
 	class UWidgetComponent* CharacterStatusBar;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
+	class UMotionWarpingComponent* MotionWarpingComponent;
+	
 	//Attribute Functions
 
 	UFUNCTION(BlueprintCallable, Category = "Attributes")
