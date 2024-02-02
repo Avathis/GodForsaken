@@ -105,6 +105,9 @@ protected:
 	UPROPERTY(EditAnywhere, Category = "Target AOE Selection | Data")
 	uint8 bIgnoreInstigatorActor : 1;
 
+	UPROPERTY(EditAnywhere, Category = "Target AOE Selection | Data")
+	uint8 bUseControllerRotation : 1;
+
 	/** The half extent to use for box and cylinder */
 	UPROPERTY(EditAnywhere, Category = "Target AOE Selection | Box and Cylinder")
 	FVector HalfExtent = FVector::ZeroVector;

@@ -13,7 +13,8 @@
 				"GameplayAbilities",
 				"EnhancedInput",
 				"UMG",
-				"TargetingSystem"
+				"TargetingSystem",
+				"CoreUObject"
 			]
 		}
 	],

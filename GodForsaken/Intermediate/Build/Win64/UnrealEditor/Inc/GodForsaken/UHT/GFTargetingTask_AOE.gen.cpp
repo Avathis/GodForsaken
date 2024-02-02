@@ -513,6 +513,11 @@ void EmptyLinkFunctionForGeneratedCodeGFTargetingTask_AOE() {}
 		static void NewProp_bIgnoreInstigatorActor_SetBit(void* Obj);
 		static const UECodeGen_Private::FBoolPropertyParams NewProp_bIgnoreInstigatorActor;
 #if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_bUseControllerRotation_MetaData[];
+#endif
+		static void NewProp_bUseControllerRotation_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_bUseControllerRotation;
+#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_HalfExtent_MetaData[];
 #endif
 		static const UECodeGen_Private::FStructPropertyParams NewProp_HalfExtent;
@@ -668,6 +673,17 @@ void EmptyLinkFunctionForGeneratedCodeGFTargetingTask_AOE() {}
 	}
 	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UGFTargetingTask_AOE_Statics::NewProp_bIgnoreInstigatorActor = { "bIgnoreInstigatorActor", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Bool , RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(uint8), sizeof(UGFTargetingTask_AOE), &Z_Construct_UClass_UGFTargetingTask_AOE_Statics::NewProp_bIgnoreInstigatorActor_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UGFTargetingTask_AOE_Statics::NewProp_bIgnoreInstigatorActor_MetaData), Z_Construct_UClass_UGFTargetingTask_AOE_Statics::NewProp_bIgnoreInstigatorActor_MetaData) };
 #if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGFTargetingTask_AOE_Statics::NewProp_bUseControllerRotation_MetaData[] = {
+		{ "Category", "Target AOE Selection | Data" },
+		{ "ModuleRelativePath", "Public/GameplayAbilitySystem/AbilityTasks/GFTargetingTask_AOE.h" },
+	};
+#endif
+	void Z_Construct_UClass_UGFTargetingTask_AOE_Statics::NewProp_bUseControllerRotation_SetBit(void* Obj)
+	{
+		((UGFTargetingTask_AOE*)Obj)->bUseControllerRotation = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UGFTargetingTask_AOE_Statics::NewProp_bUseControllerRotation = { "bUseControllerRotation", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Bool , RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(uint8), sizeof(UGFTargetingTask_AOE), &Z_Construct_UClass_UGFTargetingTask_AOE_Statics::NewProp_bUseControllerRotation_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UGFTargetingTask_AOE_Statics::NewProp_bUseControllerRotation_MetaData), Z_Construct_UClass_UGFTargetingTask_AOE_Statics::NewProp_bUseControllerRotation_MetaData) };
+#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGFTargetingTask_AOE_Statics::NewProp_HalfExtent_MetaData[] = {
 		{ "Category", "Target AOE Selection | Box and Cylinder" },
 #if !UE_BUILD_SHIPPING
@@ -731,6 +747,7 @@ void EmptyLinkFunctionForGeneratedCodeGFTargetingTask_AOE() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGFTargetingTask_AOE_Statics::NewProp_DefaultSourceRotation,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGFTargetingTask_AOE_Statics::NewProp_bIgnoreSourceActor,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGFTargetingTask_AOE_Statics::NewProp_bIgnoreInstigatorActor,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGFTargetingTask_AOE_Statics::NewProp_bUseControllerRotation,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGFTargetingTask_AOE_Statics::NewProp_HalfExtent,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGFTargetingTask_AOE_Statics::NewProp_Radius,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGFTargetingTask_AOE_Statics::NewProp_HalfHeight,
@@ -778,9 +795,9 @@ void EmptyLinkFunctionForGeneratedCodeGFTargetingTask_AOE() {}
 		{ EGFTargetingAOEShape_StaticEnum, TEXT("EGFTargetingAOEShape"), &Z_Registration_Info_UEnum_EGFTargetingAOEShape, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1216213302U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_GameplayAbilitySystem_AbilityTasks_GFTargetingTask_AOE_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UGFTargetingTask_AOE, UGFTargetingTask_AOE::StaticClass, TEXT("UGFTargetingTask_AOE"), &Z_Registration_Info_UClass_UGFTargetingTask_AOE, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UGFTargetingTask_AOE), 1503560057U) },
+		{ Z_Construct_UClass_UGFTargetingTask_AOE, UGFTargetingTask_AOE::StaticClass, TEXT("UGFTargetingTask_AOE"), &Z_Registration_Info_UClass_UGFTargetingTask_AOE, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UGFTargetingTask_AOE), 1511789703U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_GameplayAbilitySystem_AbilityTasks_GFTargetingTask_AOE_h_1498057474(TEXT("/Script/GodForsaken"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_GameplayAbilitySystem_AbilityTasks_GFTargetingTask_AOE_h_1288963675(TEXT("/Script/GodForsaken"),
 		Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_GameplayAbilitySystem_AbilityTasks_GFTargetingTask_AOE_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_GameplayAbilitySystem_AbilityTasks_GFTargetingTask_AOE_h_Statics::ClassInfo),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_GameplayAbilitySystem_AbilityTasks_GFTargetingTask_AOE_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_GameplayAbilitySystem_AbilityTasks_GFTargetingTask_AOE_h_Statics::EnumInfo));

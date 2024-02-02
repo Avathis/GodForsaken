@@ -44,13 +44,36 @@ UCLASS()
 class GODFORSAKEN_API UGFGameplayAbility : public UGameplayAbility
 {
 	GENERATED_BODY()
-
+public:
 	UGFGameplayAbility();
 
-public:
+	UFUNCTION(BlueprintCallable, BlueprintPure)
+	class AGFCharacter* GetGFCharacter();
+
 	EGFAbilityActivationGroup GetActivationGroup() const {return ActivationGroup;}
 
 	EGFAbilityActivationPolicy GetActivationPolicy() const {return ActivationPolicy;}
+
+	UFUNCTION(BlueprintCallable, Category = Ability)
+	FActiveGameplayEffectHandle GetGrantedByEffectHandle();
+
+	virtual void OnAvatarSet(const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilitySpec& Spec) override;
+
+	virtual void ApplyCooldown(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo) const override;
+
+	virtual const FGameplayTagContainer* GetCooldownTags() const override;
+	
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Ability Data")
+	bool bActivateAbilityOnGranted = false;
+
+	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Cooldown")
+	FScalableFloat CooldownDuration;
+
+	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Cooldown")
+	FGameplayTagContainer CooldownTags;
+	
+	UPROPERTY(Transient)
+	FGameplayTagContainer TempCooldownTags;
 
 protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)

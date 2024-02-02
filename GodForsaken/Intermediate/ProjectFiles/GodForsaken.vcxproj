@@ -184,6 +184,11 @@
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
       <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
     </ClCompile>
+    <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\GFAbilitiesGEComponent.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
     <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\GFAbilitySystemComponent.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
@@ -199,7 +204,22 @@
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
       <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
     </ClCompile>
+    <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\GFGameplayCueNotify_Burst.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\GFGameplayCueSourceObject.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
     <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\AbilityTasks\GFTargetingTask_AOE.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\CalculationClasses\GFGameplayMMC.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
       <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
@@ -223,10 +243,14 @@
     <ClInclude Include="..\..\Source\GodForsaken\Public\BaseClasses\Components\GFSpringArmComponent.h"/>
     <ClInclude Include="..\..\Source\GodForsaken\Public\BaseClasses\Input\GFEnhancedInputComponent.h"/>
     <ClInclude Include="..\..\Source\GodForsaken\Public\BaseClasses\Input\GFInputConfig.h"/>
+    <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\GFAbilitiesGEComponent.h"/>
     <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\GFAbilitySystemComponent.h"/>
     <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\GFAttributeSet.h"/>
     <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\GFGameplayAbility.h"/>
+    <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\GFGameplayCueNotify_Burst.h"/>
+    <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\GFGameplayCueSourceObject.h"/>
     <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\AbilityTasks\GFTargetingTask_AOE.h"/>
+    <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\CalculationClasses\GFGameplayMMC.h"/>
     <ClInclude Include="..\..\Source\GodForsaken\Public\Player\GFPlayerController.h"/>
     <ClInclude Include="..\..\Source\GodForsaken\Public\UI\GFCharacterWidget.h"/>
   </ItemGroup>

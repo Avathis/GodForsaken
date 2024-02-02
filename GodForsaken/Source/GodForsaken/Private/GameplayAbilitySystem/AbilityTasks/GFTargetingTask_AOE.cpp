@@ -8,6 +8,7 @@
 #include "Engine/EngineTypes.h"
 #include "Engine/World.h"
 #include "GameFramework/Actor.h"
+#include "GameFramework/Character.h"
 #include "TargetingSystem/TargetingSubsystem.h"
 #include "Types/TargetingSystemLogs.h"
 
@@ -266,6 +267,11 @@ FQuat UGFTargetingTask_AOE::GetSourceRotation_Implementation(const FTargetingReq
 	{
 		if (SourceContext->SourceActor)
 		{
+			if(bUseControllerRotation)
+			{
+				const ACharacter* SourceCharacter = Cast<ACharacter>(SourceContext->SourceActor);
+				return FQuat(FRotator(0.f,SourceCharacter->GetControlRotation().Yaw,0.f));
+			}
 			return FQuat(SourceContext->SourceActor->GetActorRotation());
 		}
 	}
@@ -279,6 +285,11 @@ FVector UGFTargetingTask_AOE::GetSourceForwardVector_Implementation(
 	{
 		if (SourceContext->SourceActor)
 		{
+			if(bUseControllerRotation)
+			{
+				const ACharacter* SourceCharacter = Cast<ACharacter>(SourceContext->SourceActor);
+				return FRotator(0.f,SourceCharacter->GetControlRotation().Yaw,0.f).Vector();
+			}
 			return SourceContext->SourceActor->GetActorForwardVector();
 		}
 	}

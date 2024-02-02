@@ -118,6 +118,9 @@
     <Filter Include="Source\GodForsaken\Private\GameplayAbilitySystem">
       <UniqueIdentifier>{AA3BD7A9-27FF-3E51-8DC9-3F1653D8AB9E}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\GFAbilitiesGEComponent.cpp">
+      <Filter>Source\GodForsaken\Private\GameplayAbilitySystem</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\GFAbilitySystemComponent.cpp">
       <Filter>Source\GodForsaken\Private\GameplayAbilitySystem</Filter>
     </ClCompile>
@@ -127,11 +130,23 @@
     <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\GFGameplayAbility.cpp">
       <Filter>Source\GodForsaken\Private\GameplayAbilitySystem</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\GFGameplayCueNotify_Burst.cpp">
+      <Filter>Source\GodForsaken\Private\GameplayAbilitySystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\GFGameplayCueSourceObject.cpp">
+      <Filter>Source\GodForsaken\Private\GameplayAbilitySystem</Filter>
+    </ClCompile>
     <Filter Include="Source\GodForsaken\Private\GameplayAbilitySystem\AbilityTasks">
       <UniqueIdentifier>{63BF7C7C-30F0-336B-8687-346A9625FF15}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\AbilityTasks\GFTargetingTask_AOE.cpp">
       <Filter>Source\GodForsaken\Private\GameplayAbilitySystem\AbilityTasks</Filter>
+    </ClCompile>
+    <Filter Include="Source\GodForsaken\Private\GameplayAbilitySystem\CalculationClasses">
+      <UniqueIdentifier>{8979A149-1ADF-3DD2-A4BB-318FCEAF8253}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\CalculationClasses\GFGameplayMMC.cpp">
+      <Filter>Source\GodForsaken\Private\GameplayAbilitySystem\CalculationClasses</Filter>
     </ClCompile>
     <Filter Include="Source\GodForsaken\Private\Player">
       <UniqueIdentifier>{6D3E8C82-17B1-3404-95D6-CABDB82F5DF6}</UniqueIdentifier>
@@ -193,6 +208,9 @@
     <Filter Include="Source\GodForsaken\Public\GameplayAbilitySystem">
       <UniqueIdentifier>{E0F8B4D1-B5B9-325D-B14D-C88C550C368B}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\GFAbilitiesGEComponent.h">
+      <Filter>Source\GodForsaken\Public\GameplayAbilitySystem</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\GFAbilitySystemComponent.h">
       <Filter>Source\GodForsaken\Public\GameplayAbilitySystem</Filter>
     </ClInclude>
@@ -202,11 +220,23 @@
     <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\GFGameplayAbility.h">
       <Filter>Source\GodForsaken\Public\GameplayAbilitySystem</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\GFGameplayCueNotify_Burst.h">
+      <Filter>Source\GodForsaken\Public\GameplayAbilitySystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\GFGameplayCueSourceObject.h">
+      <Filter>Source\GodForsaken\Public\GameplayAbilitySystem</Filter>
+    </ClInclude>
     <Filter Include="Source\GodForsaken\Public\GameplayAbilitySystem\AbilityTasks">
       <UniqueIdentifier>{5B972E3D-C55C-3DAF-835D-7D6E4E292F43}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\AbilityTasks\GFTargetingTask_AOE.h">
       <Filter>Source\GodForsaken\Public\GameplayAbilitySystem\AbilityTasks</Filter>
+    </ClInclude>
+    <Filter Include="Source\GodForsaken\Public\GameplayAbilitySystem\CalculationClasses">
+      <UniqueIdentifier>{30A0330E-C448-3451-9BA3-B448447F66A2}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\CalculationClasses\GFGameplayMMC.h">
+      <Filter>Source\GodForsaken\Public\GameplayAbilitySystem\CalculationClasses</Filter>
     </ClInclude>
     <Filter Include="Source\GodForsaken\Public\Player">
       <UniqueIdentifier>{BFF85DF2-F7B8-3A44-BB2F-39BDD858AC71}</UniqueIdentifier>
