@@ -18,11 +18,19 @@ void EmptyLinkFunctionForGeneratedCodeGFCharacter() {}
 	GODFORSAKEN_API UClass* Z_Construct_UClass_AGFCharacter_NoRegister();
 	GODFORSAKEN_API UClass* Z_Construct_UClass_UGFAbilitySystemComponent_NoRegister();
 	GODFORSAKEN_API UClass* Z_Construct_UClass_UGFAttributeSet_NoRegister();
+	GODFORSAKEN_API UClass* Z_Construct_UClass_UGFCharacterWidget_NoRegister();
 	GODFORSAKEN_API UClass* Z_Construct_UClass_UGFGameplayAbility_NoRegister();
 	MOTIONWARPING_API UClass* Z_Construct_UClass_UMotionWarpingComponent_NoRegister();
 	UMG_API UClass* Z_Construct_UClass_UWidgetComponent_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_GodForsaken();
 // End Cross Module References
+	DEFINE_FUNCTION(AGFCharacter::execGetArmor)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(float*)Z_Param__Result=P_THIS->GetArmor();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(AGFCharacter::execGetMaxSpeed)
 	{
 		P_FINISH;
@@ -156,6 +164,7 @@ void EmptyLinkFunctionForGeneratedCodeGFCharacter() {}
 	{
 		UClass* Class = AGFCharacter::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
+			{ "GetArmor", &AGFCharacter::execGetArmor },
 			{ "GetEnergy", &AGFCharacter::execGetEnergy },
 			{ "GetEnergyPercentage", &AGFCharacter::execGetEnergyPercentage },
 			{ "GetEnergyRegenRate", &AGFCharacter::execGetEnergyRegenRate },
@@ -176,6 +185,41 @@ void EmptyLinkFunctionForGeneratedCodeGFCharacter() {}
 			{ "GrantAbility", &AGFCharacter::execGrantAbility },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_AGFCharacter_GetArmor_Statics
+	{
+		struct GFCharacter_eventGetArmor_Parms
+		{
+			float ReturnValue;
+		};
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_ReturnValue;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_AGFCharacter_GetArmor_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(GFCharacter_eventGetArmor_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AGFCharacter_GetArmor_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AGFCharacter_GetArmor_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AGFCharacter_GetArmor_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Attributes" },
+		{ "ModuleRelativePath", "Public/BaseClasses/Characters/GFCharacter.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AGFCharacter_GetArmor_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AGFCharacter, nullptr, "GetArmor", nullptr, nullptr, Z_Construct_UFunction_AGFCharacter_GetArmor_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AGFCharacter_GetArmor_Statics::PropPointers), sizeof(Z_Construct_UFunction_AGFCharacter_GetArmor_Statics::GFCharacter_eventGetArmor_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AGFCharacter_GetArmor_Statics::Function_MetaDataParams), Z_Construct_UFunction_AGFCharacter_GetArmor_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_AGFCharacter_GetArmor_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_AGFCharacter_GetArmor_Statics::GFCharacter_eventGetArmor_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_AGFCharacter_GetArmor()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AGFCharacter_GetArmor_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_AGFCharacter_GetEnergy_Statics
 	{
@@ -849,6 +893,10 @@ void EmptyLinkFunctionForGeneratedCodeGFCharacter() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_MotionWarpingComponent_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_MotionWarpingComponent;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_Widget_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_Widget;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
@@ -860,6 +908,7 @@ void EmptyLinkFunctionForGeneratedCodeGFCharacter() {}
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AGFCharacter_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_AGFCharacter_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_AGFCharacter_GetArmor, "GetArmor" }, // 1459463992
 		{ &Z_Construct_UFunction_AGFCharacter_GetEnergy, "GetEnergy" }, // 1277416499
 		{ &Z_Construct_UFunction_AGFCharacter_GetEnergyPercentage, "GetEnergyPercentage" }, // 3487373588
 		{ &Z_Construct_UFunction_AGFCharacter_GetEnergyRegenRate, "GetEnergyRegenRate" }, // 3486010478
@@ -923,11 +972,20 @@ void EmptyLinkFunctionForGeneratedCodeGFCharacter() {}
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGFCharacter_Statics::NewProp_MotionWarpingComponent = { "MotionWarpingComponent", nullptr, (EPropertyFlags)0x001000000008000d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGFCharacter, MotionWarpingComponent), Z_Construct_UClass_UMotionWarpingComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AGFCharacter_Statics::NewProp_MotionWarpingComponent_MetaData), Z_Construct_UClass_AGFCharacter_Statics::NewProp_MotionWarpingComponent_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGFCharacter_Statics::NewProp_Widget_MetaData[] = {
+		{ "Category", "Components" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/BaseClasses/Characters/GFCharacter.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGFCharacter_Statics::NewProp_Widget = { "Widget", nullptr, (EPropertyFlags)0x00100000000a000d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGFCharacter, Widget), Z_Construct_UClass_UGFCharacterWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AGFCharacter_Statics::NewProp_Widget_MetaData), Z_Construct_UClass_AGFCharacter_Statics::NewProp_Widget_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AGFCharacter_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGFCharacter_Statics::NewProp_AbilitySystemComponent,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGFCharacter_Statics::NewProp_AttributeSet,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGFCharacter_Statics::NewProp_CharacterStatusBar,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGFCharacter_Statics::NewProp_MotionWarpingComponent,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGFCharacter_Statics::NewProp_Widget,
 	};
 		const UECodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_AGFCharacter_Statics::InterfaceParams[] = {
 			{ Z_Construct_UClass_UAbilitySystemInterface_NoRegister, (int32)VTABLE_OFFSET(AGFCharacter, IAbilitySystemInterface), false },  // 3195502011
@@ -971,9 +1029,9 @@ void EmptyLinkFunctionForGeneratedCodeGFCharacter() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Characters_GFCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AGFCharacter, AGFCharacter::StaticClass, TEXT("AGFCharacter"), &Z_Registration_Info_UClass_AGFCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGFCharacter), 1514792619U) },
+		{ Z_Construct_UClass_AGFCharacter, AGFCharacter::StaticClass, TEXT("AGFCharacter"), &Z_Registration_Info_UClass_AGFCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGFCharacter), 326430563U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Characters_GFCharacter_h_1133991796(TEXT("/Script/GodForsaken"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Characters_GFCharacter_h_1241227315(TEXT("/Script/GodForsaken"),
 		Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Characters_GFCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Characters_GFCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

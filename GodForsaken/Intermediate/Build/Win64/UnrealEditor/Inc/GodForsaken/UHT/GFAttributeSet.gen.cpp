@@ -82,6 +82,10 @@ void EmptyLinkFunctionForGeneratedCodeGFAttributeSet() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_MaxSpeed_MetaData[];
 #endif
 		static const UECodeGen_Private::FStructPropertyParams NewProp_MaxSpeed;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_Armor_MetaData[];
+#endif
+		static const UECodeGen_Private::FStructPropertyParams NewProp_Armor;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -188,6 +192,13 @@ void EmptyLinkFunctionForGeneratedCodeGFAttributeSet() {}
 	};
 #endif
 	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UGFAttributeSet_Statics::NewProp_MaxSpeed = { "MaxSpeed", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UGFAttributeSet, MaxSpeed), Z_Construct_UScriptStruct_FGameplayAttributeData, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UGFAttributeSet_Statics::NewProp_MaxSpeed_MetaData), Z_Construct_UClass_UGFAttributeSet_Statics::NewProp_MaxSpeed_MetaData) }; // 2151517668
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGFAttributeSet_Statics::NewProp_Armor_MetaData[] = {
+		{ "Category", "Constitution" },
+		{ "ModuleRelativePath", "Public/GameplayAbilitySystem/GFAttributeSet.h" },
+	};
+#endif
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UGFAttributeSet_Statics::NewProp_Armor = { "Armor", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UGFAttributeSet, Armor), Z_Construct_UScriptStruct_FGameplayAttributeData, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UGFAttributeSet_Statics::NewProp_Armor_MetaData), Z_Construct_UClass_UGFAttributeSet_Statics::NewProp_Armor_MetaData) }; // 2151517668
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UGFAttributeSet_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGFAttributeSet_Statics::NewProp_Health,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGFAttributeSet_Statics::NewProp_MaxHealth,
@@ -202,6 +213,7 @@ void EmptyLinkFunctionForGeneratedCodeGFAttributeSet() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGFAttributeSet_Statics::NewProp_MaxSpecial,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGFAttributeSet_Statics::NewProp_Speed,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGFAttributeSet_Statics::NewProp_MaxSpeed,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGFAttributeSet_Statics::NewProp_Armor,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UGFAttributeSet_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UGFAttributeSet>::IsAbstract,
@@ -241,9 +253,9 @@ void EmptyLinkFunctionForGeneratedCodeGFAttributeSet() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_GameplayAbilitySystem_GFAttributeSet_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UGFAttributeSet, UGFAttributeSet::StaticClass, TEXT("UGFAttributeSet"), &Z_Registration_Info_UClass_UGFAttributeSet, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UGFAttributeSet), 1776944286U) },
+		{ Z_Construct_UClass_UGFAttributeSet, UGFAttributeSet::StaticClass, TEXT("UGFAttributeSet"), &Z_Registration_Info_UClass_UGFAttributeSet, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UGFAttributeSet), 2854673567U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_GameplayAbilitySystem_GFAttributeSet_h_1024130707(TEXT("/Script/GodForsaken"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_GameplayAbilitySystem_GFAttributeSet_h_2718586658(TEXT("/Script/GodForsaken"),
 		Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_GameplayAbilitySystem_GFAttributeSet_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_GameplayAbilitySystem_GFAttributeSet_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

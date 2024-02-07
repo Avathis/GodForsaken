@@ -51,7 +51,11 @@ void AGFPlayableCharacter::BeginPlay()
 		{
 			Subsystem->AddMappingContext(DefaultMappingContext, 0);
 		}
+		PlayerController->SetHealthPercentage(GetHealthPercentage());
+		PlayerController->SetSpecialPercentage(GetSpecialPercentage());
+		PlayerController->SetStaminaPercentage(GetStaminaPercentage());
 	}
+	
 }
 
 void AGFPlayableCharacter::BindASCInput()
@@ -139,4 +143,98 @@ void AGFPlayableCharacter::Look(const FInputActionValue& Value)
 		AddControllerYawInput(LookAxisValue.X);
 		AddControllerPitchInput(LookAxisValue.Y);
 	}
+}
+
+void AGFPlayableCharacter::HealthChanged(const FOnAttributeChangeData& Data)
+{
+	Super::HealthChanged(Data);
+	if(PlayerController)
+	{
+		PlayerController->SetHealthPercentage(GetHealthPercentage());
+	}
+}
+
+void AGFPlayableCharacter::MaxHealthChanged(const FOnAttributeChangeData& Data)
+{
+	Super::MaxHealthChanged(Data);
+	if(PlayerController)
+	{
+		PlayerController->SetHealthPercentage(GetHealthPercentage());
+	}
+}
+
+void AGFPlayableCharacter::HealthRegenRateChanged(const FOnAttributeChangeData& Data)
+{
+	Super::HealthRegenRateChanged(Data);
+}
+
+void AGFPlayableCharacter::EnergyChanged(const FOnAttributeChangeData& Data)
+{
+	Super::EnergyChanged(Data);
+}
+
+void AGFPlayableCharacter::MaxEnergyChanged(const FOnAttributeChangeData& Data)
+{
+	Super::MaxEnergyChanged(Data);
+}
+
+void AGFPlayableCharacter::EnergyRegenRateChanged(const FOnAttributeChangeData& Data)
+{
+	Super::EnergyRegenRateChanged(Data);
+}
+
+void AGFPlayableCharacter::StaminaChanged(const FOnAttributeChangeData& Data)
+{
+	Super::StaminaChanged(Data);
+	if(PlayerController)
+	{
+		PlayerController->SetStaminaPercentage(GetStaminaPercentage());
+	}
+}
+
+void AGFPlayableCharacter::MaxStaminaChanged(const FOnAttributeChangeData& Data)
+{
+	Super::MaxStaminaChanged(Data);
+	if(PlayerController)
+	{
+		PlayerController->SetStaminaPercentage(GetStaminaPercentage());
+	}
+}
+
+void AGFPlayableCharacter::StaminaRegenRateChanged(const FOnAttributeChangeData& Data)
+{
+	Super::StaminaRegenRateChanged(Data);
+}
+
+void AGFPlayableCharacter::SpecialChanged(const FOnAttributeChangeData& Data)
+{
+	Super::SpecialChanged(Data);
+	if(PlayerController)
+	{
+		PlayerController->SetSpecialPercentage(GetSpecialPercentage());
+	}
+}
+
+void AGFPlayableCharacter::MaxSpecialChanged(const FOnAttributeChangeData& Data)
+{
+	Super::MaxSpecialChanged(Data);
+	if(PlayerController)
+	{
+		PlayerController->SetSpecialPercentage(GetSpecialPercentage());
+	}
+}
+
+void AGFPlayableCharacter::SpeedChanged(const FOnAttributeChangeData& Data)
+{
+	Super::SpeedChanged(Data);
+}
+
+void AGFPlayableCharacter::MaxSpeedChanged(const FOnAttributeChangeData& Data)
+{
+	Super::MaxSpeedChanged(Data);
+}
+
+void AGFPlayableCharacter::ArmorChanged(const FOnAttributeChangeData& Data)
+{
+	Super::ArmorChanged(Data);
 }

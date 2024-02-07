@@ -7,6 +7,7 @@
 #include "Components/WidgetComponent.h"
 #include "GameplayAbilitySystem/GFAttributeSet.h"
 #include "GameplayAbilitySystem/GFGameplayAbility.h"
+#include "Kismet/KismetMathLibrary.h"
 #include "UI/GFCharacterWidget.h"
 
 // Sets default values
@@ -58,6 +59,8 @@ void AGFCharacter::BeginPlay()
 	{
 		CharacterStatusBar->SetVisibility(true);
 	}
+
+	Widget = Cast<UGFCharacterWidget>(CharacterStatusBar->GetWidget());
 }
 
 void AGFCharacter::GrantAbility(TSubclassOf<UGFGameplayAbility> AbilityClass, int32 AbilityLevel, FGameplayTag InputTag)
@@ -228,7 +231,7 @@ float AGFCharacter::GetHealthPercentage()
 {
 	if(AttributeSet)
 	{
-		return AttributeSet->GetHealth()/AttributeSet->GetMaxHealth();
+		return UKismetMathLibrary::SafeDivide(AttributeSet->GetHealth(),AttributeSet->GetMaxHealth());
 	}
 	return 1.f;
 }
@@ -237,7 +240,7 @@ float AGFCharacter::GetStaminaPercentage()
 {
 	if(AttributeSet)
 	{
-		return AttributeSet->GetStamina()/AttributeSet->GetMaxStamina();
+		return UKismetMathLibrary::SafeDivide(AttributeSet->GetStamina(),AttributeSet->GetMaxStamina());
 	}
 	return 1.f;
 }
@@ -246,7 +249,7 @@ float AGFCharacter::GetEnergyPercentage()
 {
 	if(AttributeSet)
 	{
-		return AttributeSet->GetEnergy()/AttributeSet->GetMaxEnergy();
+		return UKismetMathLibrary::SafeDivide(AttributeSet->GetEnergy(),AttributeSet->GetMaxEnergy());
 	}
 	return 1.f;
 }
@@ -255,7 +258,7 @@ float AGFCharacter::GetSpecialPercentage()
 {
 	if(AttributeSet)
 	{
-		return AttributeSet->GetSpecial()/AttributeSet->GetMaxSpecial();
+		return UKismetMathLibrary::SafeDivide(AttributeSet->GetSpecial(),AttributeSet->GetMaxSpecial());
 	}
 	return 1.f;
 }
@@ -284,11 +287,28 @@ float AGFCharacter::GetMaxSpeed() const
 	}
 }
 
+float AGFCharacter::GetArmor() const
+{
+	if(AttributeSet)
+	{
+		return AttributeSet->GetArmor();
+	}
+	else
+	{
+		return 0.f;
+	}
+}
+
+void AGFCharacter::ArmorChanged(const FOnAttributeChangeData& Data)
+{
+	
+}
+
 void AGFCharacter::HealthChanged(const FOnAttributeChangeData& Data)
 {
 	if(CharacterStatusBar)
 	{
-		if(UGFCharacterWidget* Widget = Cast<UGFCharacterWidget>(CharacterStatusBar->GetWidget()))
+		if(Widget)
 		{
 			Widget->SetHealthPercentage(GetHealthPercentage());
 		}
@@ -299,7 +319,7 @@ void AGFCharacter::MaxHealthChanged(const FOnAttributeChangeData& Data)
 {
 	if(CharacterStatusBar)
 	{
-		if(UGFCharacterWidget* Widget = Cast<UGFCharacterWidget>(CharacterStatusBar->GetWidget()))
+		if(Widget)
 		{
 			Widget->SetHealthPercentage(GetHealthPercentage());
 		}

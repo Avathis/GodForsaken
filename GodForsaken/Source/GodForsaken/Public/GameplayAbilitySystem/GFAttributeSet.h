@@ -76,5 +76,9 @@ public:
 	FGameplayAttributeData MaxSpeed;
 	ATTRIBUTE_ACCESSORS(UGFAttributeSet, MaxSpeed);
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Constitution")
+	FGameplayAttributeData Armor;
+	ATTRIBUTE_ACCESSORS(UGFAttributeSet, Armor);
+
 	
 };

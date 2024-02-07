@@ -16,9 +16,25 @@ class GODFORSAKEN_API AGFPlayerController : public APlayerController
 	GENERATED_BODY()
 
 public:
+
+	//UPROPERTIES
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "HUD")
+	TSubclassOf<UUserWidget> HUDWidgetClass;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "HUD")
+	class UGFHUDWidget* HUDWidget;
 	
+	//UFUNCTIONS
 	UFUNCTION(BlueprintCallable, Category = "PlayerController")
 	UGFAbilitySystemComponent* GetGFAbilitySystemComponent() const;
+
+	UFUNCTION(BlueprintCallable, Category = "HUD")
+	void SetHealthPercentage(float NewValue);
+
+	UFUNCTION(BlueprintCallable, Category = "HUD")
+	void SetStaminaPercentage(float NewValue);
+
+	UFUNCTION(BlueprintCallable, Category = "HUD")
+	void SetSpecialPercentage(float NewValue);
 
 protected:
 	virtual void BeginPlay() override;

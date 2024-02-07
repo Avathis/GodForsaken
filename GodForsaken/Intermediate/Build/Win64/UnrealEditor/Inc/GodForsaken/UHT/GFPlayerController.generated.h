@@ -20,6 +20,9 @@ class UGFAbilitySystemComponent;
 #define FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_Player_GFPlayerController_h_16_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_Player_GFPlayerController_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execSetSpecialPercentage); \
+	DECLARE_FUNCTION(execSetStaminaPercentage); \
+	DECLARE_FUNCTION(execSetHealthPercentage); \
 	DECLARE_FUNCTION(execGetGFAbilitySystemComponent);
 
 

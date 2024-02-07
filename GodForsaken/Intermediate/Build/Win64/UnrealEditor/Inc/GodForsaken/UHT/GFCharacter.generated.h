@@ -21,6 +21,7 @@ struct FGameplayTag;
 #define FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Characters_GFCharacter_h_14_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Characters_GFCharacter_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execGetArmor); \
 	DECLARE_FUNCTION(execGetMaxSpeed); \
 	DECLARE_FUNCTION(execGetSpeed); \
 	DECLARE_FUNCTION(execGetSpecialPercentage); \

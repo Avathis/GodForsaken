@@ -59,5 +59,20 @@ protected:
 	void Move(const FInputActionValue& Value);
 
 	void Look(const FInputActionValue& Value);
+
+	virtual void HealthChanged(const FOnAttributeChangeData& Data) override;
+	virtual void MaxHealthChanged(const FOnAttributeChangeData& Data) override;
+	virtual void HealthRegenRateChanged(const FOnAttributeChangeData& Data) override;
+	virtual void EnergyChanged(const FOnAttributeChangeData& Data) override;
+	virtual void MaxEnergyChanged(const FOnAttributeChangeData& Data) override;
+	virtual void EnergyRegenRateChanged(const FOnAttributeChangeData& Data) override;
+	virtual void StaminaChanged(const FOnAttributeChangeData& Data) override;
+	virtual void MaxStaminaChanged(const FOnAttributeChangeData& Data) override;
+	virtual void StaminaRegenRateChanged(const FOnAttributeChangeData& Data) override;
+	virtual void SpecialChanged(const FOnAttributeChangeData& Data) override;
+	virtual void MaxSpecialChanged(const FOnAttributeChangeData& Data) override;
+	virtual void SpeedChanged(const FOnAttributeChangeData& Data) override;
+	virtual void MaxSpeedChanged(const FOnAttributeChangeData& Data) override;
+	virtual void ArmorChanged(const FOnAttributeChangeData& Data) override;
 	
 };

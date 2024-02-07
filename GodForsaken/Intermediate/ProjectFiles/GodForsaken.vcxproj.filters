@@ -145,6 +145,12 @@
     <Filter Include="Source\GodForsaken\Private\GameplayAbilitySystem\CalculationClasses">
       <UniqueIdentifier>{8979A149-1ADF-3DD2-A4BB-318FCEAF8253}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\CalculationClasses\GFGameplayDamageEEC.cpp">
+      <Filter>Source\GodForsaken\Private\GameplayAbilitySystem\CalculationClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\CalculationClasses\GFGameplayEffectExecCalculation.cpp">
+      <Filter>Source\GodForsaken\Private\GameplayAbilitySystem\CalculationClasses</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\CalculationClasses\GFGameplayMMC.cpp">
       <Filter>Source\GodForsaken\Private\GameplayAbilitySystem\CalculationClasses</Filter>
     </ClCompile>
@@ -158,6 +164,9 @@
       <UniqueIdentifier>{27863662-484C-3EF1-8966-AB62D476092B}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\GodForsaken\Private\UI\GFCharacterWidget.cpp">
+      <Filter>Source\GodForsaken\Private\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GodForsaken\Private\UI\GFHUDWidget.cpp">
       <Filter>Source\GodForsaken\Private\UI</Filter>
     </ClCompile>
     <Filter Include="Source\GodForsaken\Public">
@@ -235,6 +244,12 @@
     <Filter Include="Source\GodForsaken\Public\GameplayAbilitySystem\CalculationClasses">
       <UniqueIdentifier>{30A0330E-C448-3451-9BA3-B448447F66A2}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\CalculationClasses\GFGameplayDamageEEC.h">
+      <Filter>Source\GodForsaken\Public\GameplayAbilitySystem\CalculationClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\CalculationClasses\GFGameplayEffectExecCalculation.h">
+      <Filter>Source\GodForsaken\Public\GameplayAbilitySystem\CalculationClasses</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\CalculationClasses\GFGameplayMMC.h">
       <Filter>Source\GodForsaken\Public\GameplayAbilitySystem\CalculationClasses</Filter>
     </ClInclude>
@@ -248,6 +263,9 @@
       <UniqueIdentifier>{7A18120D-4722-3A5B-A65A-9E565D3C9C87}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\GodForsaken\Public\UI\GFCharacterWidget.h">
+      <Filter>Source\GodForsaken\Public\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GodForsaken\Public\UI\GFHUDWidget.h">
       <Filter>Source\GodForsaken\Public\UI</Filter>
     </ClInclude>
   </ItemGroup>

@@ -34,6 +34,7 @@ protected:
 	FDelegateHandle MaxSpecialChangedDelegateHandle;
 	FDelegateHandle SpeedChangedDelegateHandle;
 	FDelegateHandle MaxSpeedChangedDelegateHandle;
+	FDelegateHandle ArmorChangedDelegateHandle;
 
 private:
 
@@ -65,6 +66,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
 	class UMotionWarpingComponent* MotionWarpingComponent;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Components")
+	class UGFCharacterWidget* Widget;
 	
 	//Attribute Functions
 
@@ -119,6 +123,8 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Attributes")
 	float GetMaxSpeed() const;
 
+	UFUNCTION(BlueprintCallable, Category = "Attributes")
+	float GetArmor() const;
 
 	virtual void HealthChanged(const FOnAttributeChangeData& Data);
 	virtual void MaxHealthChanged(const FOnAttributeChangeData& Data);
@@ -133,4 +139,5 @@ public:
 	virtual void MaxSpecialChanged(const FOnAttributeChangeData& Data);
 	virtual void SpeedChanged(const FOnAttributeChangeData& Data);
 	virtual void MaxSpeedChanged(const FOnAttributeChangeData& Data);
+	virtual void ArmorChanged(const FOnAttributeChangeData& Data);
 };
