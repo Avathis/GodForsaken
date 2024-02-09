@@ -8,6 +8,7 @@
 #include "GodForsaken/Public/GameplayAbilitySystem/GFGameplayAbility.h"
 #include "ActiveGameplayEffectHandle.h"
 #include "GameplayTagContainer.h"
+#include "GodForsaken/Public/GameplayAbilitySystem/GFAbilityTypes.h"
 #include "ScalableFloat.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeGFGameplayAbility() {}
@@ -17,11 +18,15 @@ void EmptyLinkFunctionForGeneratedCodeGFGameplayAbility() {}
 	GAMEPLAYABILITIES_API UScriptStruct* Z_Construct_UScriptStruct_FScalableFloat();
 	GAMEPLAYTAGS_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayTagContainer();
 	GODFORSAKEN_API UClass* Z_Construct_UClass_AGFCharacter_NoRegister();
+	GODFORSAKEN_API UClass* Z_Construct_UClass_AGFPlayerController_NoRegister();
+	GODFORSAKEN_API UClass* Z_Construct_UClass_UGFAbilitySystemComponent_NoRegister();
+	GODFORSAKEN_API UClass* Z_Construct_UClass_UGFCharacterMovementComponent_NoRegister();
 	GODFORSAKEN_API UClass* Z_Construct_UClass_UGFGameplayAbility();
 	GODFORSAKEN_API UClass* Z_Construct_UClass_UGFGameplayAbility_NoRegister();
 	GODFORSAKEN_API UEnum* Z_Construct_UEnum_GodForsaken_AbilityUpgrades();
 	GODFORSAKEN_API UEnum* Z_Construct_UEnum_GodForsaken_EGFAbilityActivationGroup();
 	GODFORSAKEN_API UEnum* Z_Construct_UEnum_GodForsaken_EGFAbilityActivationPolicy();
+	GODFORSAKEN_API UScriptStruct* Z_Construct_UScriptStruct_FGFGameplayAbilityActorInfo();
 	UPackage* Z_Construct_UPackage__Script_GodForsaken();
 // End Cross Module References
 	static FEnumRegistrationInfo Z_Registration_Info_UEnum_EGFAbilityActivationPolicy;
@@ -188,6 +193,41 @@ void EmptyLinkFunctionForGeneratedCodeGFGameplayAbility() {}
 		}
 		return Z_Registration_Info_UEnum_AbilityUpgrades.InnerSingleton;
 	}
+	DEFINE_FUNCTION(UGFGameplayAbility::execGetGFCharacterMovementComponentFromActorInfo)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(UGFCharacterMovementComponent**)Z_Param__Result=P_THIS->GetGFCharacterMovementComponentFromActorInfo();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UGFGameplayAbility::execGetGFPlayerControllerFromActorInfo)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(AGFPlayerController**)Z_Param__Result=P_THIS->GetGFPlayerControllerFromActorInfo();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UGFGameplayAbility::execGetGFAbilitySystemComponentFromActorInfo)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(UGFAbilitySystemComponent**)Z_Param__Result=P_THIS->GetGFAbilitySystemComponentFromActorInfo();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UGFGameplayAbility::execGetGFCharacterFromActorInfo)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(AGFCharacter**)Z_Param__Result=P_THIS->GetGFCharacterFromActorInfo();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UGFGameplayAbility::execK2_GetGFActorInfo)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FGFGameplayAbilityActorInfo*)Z_Param__Result=P_THIS->K2_GetGFActorInfo();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(UGFGameplayAbility::execGetGrantedByEffectHandle)
 	{
 		P_FINISH;
@@ -206,10 +246,58 @@ void EmptyLinkFunctionForGeneratedCodeGFGameplayAbility() {}
 	{
 		UClass* Class = UGFGameplayAbility::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
+			{ "GetGFAbilitySystemComponentFromActorInfo", &UGFGameplayAbility::execGetGFAbilitySystemComponentFromActorInfo },
 			{ "GetGFCharacter", &UGFGameplayAbility::execGetGFCharacter },
+			{ "GetGFCharacterFromActorInfo", &UGFGameplayAbility::execGetGFCharacterFromActorInfo },
+			{ "GetGFCharacterMovementComponentFromActorInfo", &UGFGameplayAbility::execGetGFCharacterMovementComponentFromActorInfo },
+			{ "GetGFPlayerControllerFromActorInfo", &UGFGameplayAbility::execGetGFPlayerControllerFromActorInfo },
 			{ "GetGrantedByEffectHandle", &UGFGameplayAbility::execGetGrantedByEffectHandle },
+			{ "K2_GetGFActorInfo", &UGFGameplayAbility::execK2_GetGFActorInfo },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_UGFGameplayAbility_GetGFAbilitySystemComponentFromActorInfo_Statics
+	{
+		struct GFGameplayAbility_eventGetGFAbilitySystemComponentFromActorInfo_Parms
+		{
+			UGFAbilitySystemComponent* ReturnValue;
+		};
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_ReturnValue_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UGFGameplayAbility_GetGFAbilitySystemComponentFromActorInfo_Statics::NewProp_ReturnValue_MetaData[] = {
+		{ "EditInline", "true" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UGFGameplayAbility_GetGFAbilitySystemComponentFromActorInfo_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000080588, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(GFGameplayAbility_eventGetGFAbilitySystemComponentFromActorInfo_Parms, ReturnValue), Z_Construct_UClass_UGFAbilitySystemComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UGFGameplayAbility_GetGFAbilitySystemComponentFromActorInfo_Statics::NewProp_ReturnValue_MetaData), Z_Construct_UFunction_UGFGameplayAbility_GetGFAbilitySystemComponentFromActorInfo_Statics::NewProp_ReturnValue_MetaData) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UGFGameplayAbility_GetGFAbilitySystemComponentFromActorInfo_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UGFGameplayAbility_GetGFAbilitySystemComponentFromActorInfo_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UGFGameplayAbility_GetGFAbilitySystemComponentFromActorInfo_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Ability" },
+		{ "ModuleRelativePath", "Public/GameplayAbilitySystem/GFGameplayAbility.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UGFGameplayAbility_GetGFAbilitySystemComponentFromActorInfo_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UGFGameplayAbility, nullptr, "GetGFAbilitySystemComponentFromActorInfo", nullptr, nullptr, Z_Construct_UFunction_UGFGameplayAbility_GetGFAbilitySystemComponentFromActorInfo_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UGFGameplayAbility_GetGFAbilitySystemComponentFromActorInfo_Statics::PropPointers), sizeof(Z_Construct_UFunction_UGFGameplayAbility_GetGFAbilitySystemComponentFromActorInfo_Statics::GFGameplayAbility_eventGetGFAbilitySystemComponentFromActorInfo_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UGFGameplayAbility_GetGFAbilitySystemComponentFromActorInfo_Statics::Function_MetaDataParams), Z_Construct_UFunction_UGFGameplayAbility_GetGFAbilitySystemComponentFromActorInfo_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UGFGameplayAbility_GetGFAbilitySystemComponentFromActorInfo_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_UGFGameplayAbility_GetGFAbilitySystemComponentFromActorInfo_Statics::GFGameplayAbility_eventGetGFAbilitySystemComponentFromActorInfo_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_UGFGameplayAbility_GetGFAbilitySystemComponentFromActorInfo()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UGFGameplayAbility_GetGFAbilitySystemComponentFromActorInfo_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_UGFGameplayAbility_GetGFCharacter_Statics
 	{
@@ -245,6 +333,119 @@ void EmptyLinkFunctionForGeneratedCodeGFGameplayAbility() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_UGFGameplayAbility_GetGFCharacterFromActorInfo_Statics
+	{
+		struct GFGameplayAbility_eventGetGFCharacterFromActorInfo_Parms
+		{
+			AGFCharacter* ReturnValue;
+		};
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UGFGameplayAbility_GetGFCharacterFromActorInfo_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(GFGameplayAbility_eventGetGFCharacterFromActorInfo_Parms, ReturnValue), Z_Construct_UClass_AGFCharacter_NoRegister, METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UGFGameplayAbility_GetGFCharacterFromActorInfo_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UGFGameplayAbility_GetGFCharacterFromActorInfo_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UGFGameplayAbility_GetGFCharacterFromActorInfo_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Ability" },
+		{ "ModuleRelativePath", "Public/GameplayAbilitySystem/GFGameplayAbility.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UGFGameplayAbility_GetGFCharacterFromActorInfo_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UGFGameplayAbility, nullptr, "GetGFCharacterFromActorInfo", nullptr, nullptr, Z_Construct_UFunction_UGFGameplayAbility_GetGFCharacterFromActorInfo_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UGFGameplayAbility_GetGFCharacterFromActorInfo_Statics::PropPointers), sizeof(Z_Construct_UFunction_UGFGameplayAbility_GetGFCharacterFromActorInfo_Statics::GFGameplayAbility_eventGetGFCharacterFromActorInfo_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UGFGameplayAbility_GetGFCharacterFromActorInfo_Statics::Function_MetaDataParams), Z_Construct_UFunction_UGFGameplayAbility_GetGFCharacterFromActorInfo_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UGFGameplayAbility_GetGFCharacterFromActorInfo_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_UGFGameplayAbility_GetGFCharacterFromActorInfo_Statics::GFGameplayAbility_eventGetGFCharacterFromActorInfo_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_UGFGameplayAbility_GetGFCharacterFromActorInfo()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UGFGameplayAbility_GetGFCharacterFromActorInfo_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UGFGameplayAbility_GetGFCharacterMovementComponentFromActorInfo_Statics
+	{
+		struct GFGameplayAbility_eventGetGFCharacterMovementComponentFromActorInfo_Parms
+		{
+			UGFCharacterMovementComponent* ReturnValue;
+		};
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_ReturnValue_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UGFGameplayAbility_GetGFCharacterMovementComponentFromActorInfo_Statics::NewProp_ReturnValue_MetaData[] = {
+		{ "EditInline", "true" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UGFGameplayAbility_GetGFCharacterMovementComponentFromActorInfo_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000080588, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(GFGameplayAbility_eventGetGFCharacterMovementComponentFromActorInfo_Parms, ReturnValue), Z_Construct_UClass_UGFCharacterMovementComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UGFGameplayAbility_GetGFCharacterMovementComponentFromActorInfo_Statics::NewProp_ReturnValue_MetaData), Z_Construct_UFunction_UGFGameplayAbility_GetGFCharacterMovementComponentFromActorInfo_Statics::NewProp_ReturnValue_MetaData) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UGFGameplayAbility_GetGFCharacterMovementComponentFromActorInfo_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UGFGameplayAbility_GetGFCharacterMovementComponentFromActorInfo_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UGFGameplayAbility_GetGFCharacterMovementComponentFromActorInfo_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Ability" },
+		{ "ModuleRelativePath", "Public/GameplayAbilitySystem/GFGameplayAbility.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UGFGameplayAbility_GetGFCharacterMovementComponentFromActorInfo_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UGFGameplayAbility, nullptr, "GetGFCharacterMovementComponentFromActorInfo", nullptr, nullptr, Z_Construct_UFunction_UGFGameplayAbility_GetGFCharacterMovementComponentFromActorInfo_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UGFGameplayAbility_GetGFCharacterMovementComponentFromActorInfo_Statics::PropPointers), sizeof(Z_Construct_UFunction_UGFGameplayAbility_GetGFCharacterMovementComponentFromActorInfo_Statics::GFGameplayAbility_eventGetGFCharacterMovementComponentFromActorInfo_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UGFGameplayAbility_GetGFCharacterMovementComponentFromActorInfo_Statics::Function_MetaDataParams), Z_Construct_UFunction_UGFGameplayAbility_GetGFCharacterMovementComponentFromActorInfo_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UGFGameplayAbility_GetGFCharacterMovementComponentFromActorInfo_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_UGFGameplayAbility_GetGFCharacterMovementComponentFromActorInfo_Statics::GFGameplayAbility_eventGetGFCharacterMovementComponentFromActorInfo_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_UGFGameplayAbility_GetGFCharacterMovementComponentFromActorInfo()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UGFGameplayAbility_GetGFCharacterMovementComponentFromActorInfo_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UGFGameplayAbility_GetGFPlayerControllerFromActorInfo_Statics
+	{
+		struct GFGameplayAbility_eventGetGFPlayerControllerFromActorInfo_Parms
+		{
+			AGFPlayerController* ReturnValue;
+		};
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UGFGameplayAbility_GetGFPlayerControllerFromActorInfo_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(GFGameplayAbility_eventGetGFPlayerControllerFromActorInfo_Parms, ReturnValue), Z_Construct_UClass_AGFPlayerController_NoRegister, METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UGFGameplayAbility_GetGFPlayerControllerFromActorInfo_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UGFGameplayAbility_GetGFPlayerControllerFromActorInfo_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UGFGameplayAbility_GetGFPlayerControllerFromActorInfo_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Ability" },
+		{ "ModuleRelativePath", "Public/GameplayAbilitySystem/GFGameplayAbility.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UGFGameplayAbility_GetGFPlayerControllerFromActorInfo_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UGFGameplayAbility, nullptr, "GetGFPlayerControllerFromActorInfo", nullptr, nullptr, Z_Construct_UFunction_UGFGameplayAbility_GetGFPlayerControllerFromActorInfo_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UGFGameplayAbility_GetGFPlayerControllerFromActorInfo_Statics::PropPointers), sizeof(Z_Construct_UFunction_UGFGameplayAbility_GetGFPlayerControllerFromActorInfo_Statics::GFGameplayAbility_eventGetGFPlayerControllerFromActorInfo_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UGFGameplayAbility_GetGFPlayerControllerFromActorInfo_Statics::Function_MetaDataParams), Z_Construct_UFunction_UGFGameplayAbility_GetGFPlayerControllerFromActorInfo_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UGFGameplayAbility_GetGFPlayerControllerFromActorInfo_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_UGFGameplayAbility_GetGFPlayerControllerFromActorInfo_Statics::GFGameplayAbility_eventGetGFPlayerControllerFromActorInfo_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_UGFGameplayAbility_GetGFPlayerControllerFromActorInfo()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UGFGameplayAbility_GetGFPlayerControllerFromActorInfo_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_UGFGameplayAbility_GetGrantedByEffectHandle_Statics
 	{
 		struct GFGameplayAbility_eventGetGrantedByEffectHandle_Parms
@@ -277,6 +478,49 @@ void EmptyLinkFunctionForGeneratedCodeGFGameplayAbility() {}
 		if (!ReturnFunction)
 		{
 			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UGFGameplayAbility_GetGrantedByEffectHandle_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UGFGameplayAbility_K2_GetGFActorInfo_Statics
+	{
+		struct GFGameplayAbility_eventK2_GetGFActorInfo_Parms
+		{
+			FGFGameplayAbilityActorInfo ReturnValue;
+		};
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_ReturnValue_MetaData[];
+#endif
+		static const UECodeGen_Private::FStructPropertyParams NewProp_ReturnValue;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UGFGameplayAbility_K2_GetGFActorInfo_Statics::NewProp_ReturnValue_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UGFGameplayAbility_K2_GetGFActorInfo_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010008000000582, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(GFGameplayAbility_eventK2_GetGFActorInfo_Parms, ReturnValue), Z_Construct_UScriptStruct_FGFGameplayAbilityActorInfo, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UGFGameplayAbility_K2_GetGFActorInfo_Statics::NewProp_ReturnValue_MetaData), Z_Construct_UFunction_UGFGameplayAbility_K2_GetGFActorInfo_Statics::NewProp_ReturnValue_MetaData) }; // 1109359432
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UGFGameplayAbility_K2_GetGFActorInfo_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UGFGameplayAbility_K2_GetGFActorInfo_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UGFGameplayAbility_K2_GetGFActorInfo_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Ability" },
+		{ "ModuleRelativePath", "Public/GameplayAbilitySystem/GFGameplayAbility.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UGFGameplayAbility_K2_GetGFActorInfo_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UGFGameplayAbility, nullptr, "K2_GetGFActorInfo", nullptr, nullptr, Z_Construct_UFunction_UGFGameplayAbility_K2_GetGFActorInfo_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UGFGameplayAbility_K2_GetGFActorInfo_Statics::PropPointers), sizeof(Z_Construct_UFunction_UGFGameplayAbility_K2_GetGFActorInfo_Statics::GFGameplayAbility_eventK2_GetGFActorInfo_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UGFGameplayAbility_K2_GetGFActorInfo_Statics::Function_MetaDataParams), Z_Construct_UFunction_UGFGameplayAbility_K2_GetGFActorInfo_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UGFGameplayAbility_K2_GetGFActorInfo_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_UGFGameplayAbility_K2_GetGFActorInfo_Statics::GFGameplayAbility_eventK2_GetGFActorInfo_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_UGFGameplayAbility_K2_GetGFActorInfo()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UGFGameplayAbility_K2_GetGFActorInfo_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -329,8 +573,13 @@ void EmptyLinkFunctionForGeneratedCodeGFGameplayAbility() {}
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UGFGameplayAbility_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_UGFGameplayAbility_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_UGFGameplayAbility_GetGFAbilitySystemComponentFromActorInfo, "GetGFAbilitySystemComponentFromActorInfo" }, // 421432269
 		{ &Z_Construct_UFunction_UGFGameplayAbility_GetGFCharacter, "GetGFCharacter" }, // 1818468529
+		{ &Z_Construct_UFunction_UGFGameplayAbility_GetGFCharacterFromActorInfo, "GetGFCharacterFromActorInfo" }, // 1315817559
+		{ &Z_Construct_UFunction_UGFGameplayAbility_GetGFCharacterMovementComponentFromActorInfo, "GetGFCharacterMovementComponentFromActorInfo" }, // 905867519
+		{ &Z_Construct_UFunction_UGFGameplayAbility_GetGFPlayerControllerFromActorInfo, "GetGFPlayerControllerFromActorInfo" }, // 3749258292
 		{ &Z_Construct_UFunction_UGFGameplayAbility_GetGrantedByEffectHandle, "GetGrantedByEffectHandle" }, // 2149120499
+		{ &Z_Construct_UFunction_UGFGameplayAbility_K2_GetGFActorInfo, "K2_GetGFActorInfo" }, // 2256482383
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UGFGameplayAbility_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
@@ -440,9 +689,9 @@ void EmptyLinkFunctionForGeneratedCodeGFGameplayAbility() {}
 		{ AbilityUpgrades_StaticEnum, TEXT("AbilityUpgrades"), &Z_Registration_Info_UEnum_AbilityUpgrades, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3530863915U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_GameplayAbilitySystem_GFGameplayAbility_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UGFGameplayAbility, UGFGameplayAbility::StaticClass, TEXT("UGFGameplayAbility"), &Z_Registration_Info_UClass_UGFGameplayAbility, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UGFGameplayAbility), 2147201561U) },
+		{ Z_Construct_UClass_UGFGameplayAbility, UGFGameplayAbility::StaticClass, TEXT("UGFGameplayAbility"), &Z_Registration_Info_UClass_UGFGameplayAbility, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UGFGameplayAbility), 413625121U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_GameplayAbilitySystem_GFGameplayAbility_h_4114994516(TEXT("/Script/GodForsaken"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_GameplayAbilitySystem_GFGameplayAbility_h_523315855(TEXT("/Script/GodForsaken"),
 		Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_GameplayAbilitySystem_GFGameplayAbility_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_GameplayAbilitySystem_GFGameplayAbility_h_Statics::ClassInfo),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_GameplayAbilitySystem_GFGameplayAbility_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_GameplayAbilitySystem_GFGameplayAbility_h_Statics::EnumInfo));

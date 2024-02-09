@@ -43,6 +43,42 @@ FActiveGameplayEffectHandle UGFGameplayAbility::GetGrantedByEffectHandle()
 	return FActiveGameplayEffectHandle();
 }
 
+const FGFGameplayAbilityActorInfo* UGFGameplayAbility::GetGFActorInfo() const
+
+{
+	return static_cast<const FGFGameplayAbilityActorInfo*>(CurrentActorInfo);
+}
+
+const FGFGameplayAbilityActorInfo UGFGameplayAbility::K2_GetGFActorInfo() const
+
+{
+	return *static_cast<const FGFGameplayAbilityActorInfo*>(CurrentActorInfo);
+}
+
+AGFCharacter* UGFGameplayAbility::GetGFCharacterFromActorInfo() const
+{
+	const FGFGameplayAbilityActorInfo* GFActorInfo = GetGFActorInfo();
+	return GFActorInfo ? GFActorInfo->GetGFCharacter() : nullptr;
+}
+
+UGFAbilitySystemComponent* UGFGameplayAbility::GetGFAbilitySystemComponentFromActorInfo() const
+{
+	const FGFGameplayAbilityActorInfo* GFActorInfo = GetGFActorInfo();
+	return GFActorInfo ? GFActorInfo->GetGFAbilitySystemComponent() : nullptr;
+}
+
+AGFPlayerController* UGFGameplayAbility::GetGFPlayerControllerFromActorInfo() const
+{
+	const FGFGameplayAbilityActorInfo* GFActorInfo = GetGFActorInfo();
+	return GFActorInfo ? GFActorInfo->GetGFPlayerController() : nullptr;
+}
+
+UGFCharacterMovementComponent* UGFGameplayAbility::GetGFCharacterMovementComponentFromActorInfo()
+{
+	const FGFGameplayAbilityActorInfo* GFActorInfo = GetGFActorInfo();
+	return GFActorInfo ? GFActorInfo->GetGFCharacterMovementComponent() : nullptr;
+}
+
 void UGFGameplayAbility::OnAvatarSet(const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilitySpec& Spec)
 {
 	Super::OnAvatarSet(ActorInfo, Spec);

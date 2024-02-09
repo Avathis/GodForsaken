@@ -189,7 +189,22 @@
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
       <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
     </ClCompile>
+    <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\GFAbilityFunctionLibrary.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
     <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\GFAbilitySystemComponent.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\GFAbilitySystemGlobals.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\GFAbilityTypes.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
       <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
@@ -259,7 +274,10 @@
     <ClInclude Include="..\..\Source\GodForsaken\Public\BaseClasses\Input\GFEnhancedInputComponent.h"/>
     <ClInclude Include="..\..\Source\GodForsaken\Public\BaseClasses\Input\GFInputConfig.h"/>
     <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\GFAbilitiesGEComponent.h"/>
+    <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\GFAbilityFunctionLibrary.h"/>
     <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\GFAbilitySystemComponent.h"/>
+    <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\GFAbilitySystemGlobals.h"/>
+    <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\GFAbilityTypes.h"/>
     <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\GFAttributeSet.h"/>
     <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\GFGameplayAbility.h"/>
     <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\GFGameplayCueNotify_Burst.h"/>

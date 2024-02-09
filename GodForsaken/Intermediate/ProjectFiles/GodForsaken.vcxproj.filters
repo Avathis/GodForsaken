@@ -121,7 +121,16 @@
     <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\GFAbilitiesGEComponent.cpp">
       <Filter>Source\GodForsaken\Private\GameplayAbilitySystem</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\GFAbilityFunctionLibrary.cpp">
+      <Filter>Source\GodForsaken\Private\GameplayAbilitySystem</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\GFAbilitySystemComponent.cpp">
+      <Filter>Source\GodForsaken\Private\GameplayAbilitySystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\GFAbilitySystemGlobals.cpp">
+      <Filter>Source\GodForsaken\Private\GameplayAbilitySystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\GFAbilityTypes.cpp">
       <Filter>Source\GodForsaken\Private\GameplayAbilitySystem</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\GFAttributeSet.cpp">
@@ -220,7 +229,16 @@
     <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\GFAbilitiesGEComponent.h">
       <Filter>Source\GodForsaken\Public\GameplayAbilitySystem</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\GFAbilityFunctionLibrary.h">
+      <Filter>Source\GodForsaken\Public\GameplayAbilitySystem</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\GFAbilitySystemComponent.h">
+      <Filter>Source\GodForsaken\Public\GameplayAbilitySystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\GFAbilitySystemGlobals.h">
+      <Filter>Source\GodForsaken\Public\GameplayAbilitySystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\GFAbilityTypes.h">
       <Filter>Source\GodForsaken\Public\GameplayAbilitySystem</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\GFAttributeSet.h">

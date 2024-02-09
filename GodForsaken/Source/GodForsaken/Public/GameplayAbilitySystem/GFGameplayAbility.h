@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "GFAbilityTypes.h"
 #include "Abilities/GameplayAbility.h"
 #include "GFGameplayAbility.generated.h"
 
@@ -54,8 +55,25 @@ public:
 
 	EGFAbilityActivationPolicy GetActivationPolicy() const {return ActivationPolicy;}
 
-	UFUNCTION(BlueprintCallable, Category = Ability)
+	UFUNCTION(BlueprintCallable, Category = "Ability")
 	FActiveGameplayEffectHandle GetGrantedByEffectHandle();
+
+	const FGFGameplayAbilityActorInfo* GetGFActorInfo() const;
+	
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Ability")
+	const FGFGameplayAbilityActorInfo K2_GetGFActorInfo() const;
+
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Ability")
+	AGFCharacter* GetGFCharacterFromActorInfo() const;
+
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Ability")
+	UGFAbilitySystemComponent* GetGFAbilitySystemComponentFromActorInfo() const;
+
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Ability")
+	AGFPlayerController* GetGFPlayerControllerFromActorInfo() const;
+
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Ability")
+	UGFCharacterMovementComponent* GetGFCharacterMovementComponentFromActorInfo();
 
 	virtual void OnAvatarSet(const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilitySpec& Spec) override;
 
