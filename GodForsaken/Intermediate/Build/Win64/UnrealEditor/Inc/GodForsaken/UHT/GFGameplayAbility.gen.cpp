@@ -553,6 +553,10 @@ void EmptyLinkFunctionForGeneratedCodeGFGameplayAbility() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_TempCooldownTags_MetaData[];
 #endif
 		static const UECodeGen_Private::FStructPropertyParams NewProp_TempCooldownTags;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_Cost_MetaData[];
+#endif
+		static const UECodeGen_Private::FStructPropertyParams NewProp_Cost;
 		static const UECodeGen_Private::FBytePropertyParams NewProp_ActivationPolicy_Underlying;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_ActivationPolicy_MetaData[];
@@ -619,6 +623,13 @@ void EmptyLinkFunctionForGeneratedCodeGFGameplayAbility() {}
 	};
 #endif
 	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UGFGameplayAbility_Statics::NewProp_TempCooldownTags = { "TempCooldownTags", nullptr, (EPropertyFlags)0x0010000000002000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UGFGameplayAbility, TempCooldownTags), Z_Construct_UScriptStruct_FGameplayTagContainer, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UGFGameplayAbility_Statics::NewProp_TempCooldownTags_MetaData), Z_Construct_UClass_UGFGameplayAbility_Statics::NewProp_TempCooldownTags_MetaData) }; // 405371792
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGFGameplayAbility_Statics::NewProp_Cost_MetaData[] = {
+		{ "Category", "Cost" },
+		{ "ModuleRelativePath", "Public/GameplayAbilitySystem/GFGameplayAbility.h" },
+	};
+#endif
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UGFGameplayAbility_Statics::NewProp_Cost = { "Cost", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UGFGameplayAbility, Cost), Z_Construct_UScriptStruct_FScalableFloat, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UGFGameplayAbility_Statics::NewProp_Cost_MetaData), Z_Construct_UClass_UGFGameplayAbility_Statics::NewProp_Cost_MetaData) }; // 4070660376
 	const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_UGFGameplayAbility_Statics::NewProp_ActivationPolicy_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGFGameplayAbility_Statics::NewProp_ActivationPolicy_MetaData[] = {
@@ -640,6 +651,7 @@ void EmptyLinkFunctionForGeneratedCodeGFGameplayAbility() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGFGameplayAbility_Statics::NewProp_CooldownDuration,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGFGameplayAbility_Statics::NewProp_CooldownTags,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGFGameplayAbility_Statics::NewProp_TempCooldownTags,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGFGameplayAbility_Statics::NewProp_Cost,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGFGameplayAbility_Statics::NewProp_ActivationPolicy_Underlying,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGFGameplayAbility_Statics::NewProp_ActivationPolicy,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGFGameplayAbility_Statics::NewProp_ActivationGroup_Underlying,
@@ -689,9 +701,9 @@ void EmptyLinkFunctionForGeneratedCodeGFGameplayAbility() {}
 		{ AbilityUpgrades_StaticEnum, TEXT("AbilityUpgrades"), &Z_Registration_Info_UEnum_AbilityUpgrades, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3530863915U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_GameplayAbilitySystem_GFGameplayAbility_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UGFGameplayAbility, UGFGameplayAbility::StaticClass, TEXT("UGFGameplayAbility"), &Z_Registration_Info_UClass_UGFGameplayAbility, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UGFGameplayAbility), 413625121U) },
+		{ Z_Construct_UClass_UGFGameplayAbility, UGFGameplayAbility::StaticClass, TEXT("UGFGameplayAbility"), &Z_Registration_Info_UClass_UGFGameplayAbility, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UGFGameplayAbility), 2767651782U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_GameplayAbilitySystem_GFGameplayAbility_h_523315855(TEXT("/Script/GodForsaken"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_GameplayAbilitySystem_GFGameplayAbility_h_34853832(TEXT("/Script/GodForsaken"),
 		Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_GameplayAbilitySystem_GFGameplayAbility_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_GameplayAbilitySystem_GFGameplayAbility_h_Statics::ClassInfo),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_GameplayAbilitySystem_GFGameplayAbility_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_GameplayAbilitySystem_GFGameplayAbility_h_Statics::EnumInfo));

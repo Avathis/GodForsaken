@@ -93,6 +93,9 @@ public:
 	UPROPERTY(Transient)
 	FGameplayTagContainer TempCooldownTags;
 
+	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Cost")
+	FScalableFloat Cost;
+
 protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	EGFAbilityActivationPolicy ActivationPolicy;

@@ -73,6 +73,27 @@
     <Filter Include="Source\GodForsaken\Private">
       <UniqueIdentifier>{4D18B280-AE3D-39A2-AC87-AE265BDE3F62}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\GodForsaken\Private\AI">
+      <UniqueIdentifier>{8C89963B-2F9D-3E24-8885-A5B75198F965}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\GodForsaken\Private\AI\GFAIController.cpp">
+      <Filter>Source\GodForsaken\Private\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GodForsaken\Private\AI\GFBTDecorator_CanActivateAbility.cpp">
+      <Filter>Source\GodForsaken\Private\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GodForsaken\Private\AI\GFBTDecorator_HasGameplayTag.cpp">
+      <Filter>Source\GodForsaken\Private\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GodForsaken\Private\AI\GFBTDecorator_IsInRange.cpp">
+      <Filter>Source\GodForsaken\Private\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GodForsaken\Private\AI\GFBTService_ActivateAbilityByTag.cpp">
+      <Filter>Source\GodForsaken\Private\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GodForsaken\Private\AI\GFBTTask_ActivateAbilityByTag.cpp">
+      <Filter>Source\GodForsaken\Private\AI</Filter>
+    </ClCompile>
     <Filter Include="Source\GodForsaken\Private\BaseClasses">
       <UniqueIdentifier>{86249411-79E4-35C7-995B-08AA1650E89F}</UniqueIdentifier>
     </Filter>
@@ -142,6 +163,9 @@
     <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\GFGameplayCueNotify_Burst.cpp">
       <Filter>Source\GodForsaken\Private\GameplayAbilitySystem</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\GFGameplayCueNotify_Looping.cpp">
+      <Filter>Source\GodForsaken\Private\GameplayAbilitySystem</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\GFGameplayCueSourceObject.cpp">
       <Filter>Source\GodForsaken\Private\GameplayAbilitySystem</Filter>
     </ClCompile>
@@ -158,6 +182,9 @@
       <Filter>Source\GodForsaken\Private\GameplayAbilitySystem\CalculationClasses</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\CalculationClasses\GFGameplayEffectExecCalculation.cpp">
+      <Filter>Source\GodForsaken\Private\GameplayAbilitySystem\CalculationClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\CalculationClasses\GFGameplayHCostMMC.cpp">
       <Filter>Source\GodForsaken\Private\GameplayAbilitySystem\CalculationClasses</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\CalculationClasses\GFGameplayMMC.cpp">
@@ -181,6 +208,27 @@
     <Filter Include="Source\GodForsaken\Public">
       <UniqueIdentifier>{2002DB16-1FED-3C88-A2F5-13B8F457D5E1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\GodForsaken\Public\AI">
+      <UniqueIdentifier>{4FF3E845-90F9-32F9-B3DA-7066887BDDAA}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\GodForsaken\Public\AI\GFAIController.h">
+      <Filter>Source\GodForsaken\Public\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GodForsaken\Public\AI\GFBTDecorator_CanActivateAbility.h">
+      <Filter>Source\GodForsaken\Public\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GodForsaken\Public\AI\GFBTDecorator_HasGameplayTag.h">
+      <Filter>Source\GodForsaken\Public\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GodForsaken\Public\AI\GFBTDecorator_IsInRange.h">
+      <Filter>Source\GodForsaken\Public\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GodForsaken\Public\AI\GFBTService_ActivateAbilityByTag.h">
+      <Filter>Source\GodForsaken\Public\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GodForsaken\Public\AI\GFBTTask_ActivateAbilityByTag.h">
+      <Filter>Source\GodForsaken\Public\AI</Filter>
+    </ClInclude>
     <Filter Include="Source\GodForsaken\Public\BaseClasses">
       <UniqueIdentifier>{1ACBD040-5822-38AD-B461-40D549A61B36}</UniqueIdentifier>
     </Filter>
@@ -250,6 +298,9 @@
     <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\GFGameplayCueNotify_Burst.h">
       <Filter>Source\GodForsaken\Public\GameplayAbilitySystem</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\GFGameplayCueNotify_Looping.h">
+      <Filter>Source\GodForsaken\Public\GameplayAbilitySystem</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\GFGameplayCueSourceObject.h">
       <Filter>Source\GodForsaken\Public\GameplayAbilitySystem</Filter>
     </ClInclude>
@@ -266,6 +317,9 @@
       <Filter>Source\GodForsaken\Public\GameplayAbilitySystem\CalculationClasses</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\CalculationClasses\GFGameplayEffectExecCalculation.h">
+      <Filter>Source\GodForsaken\Public\GameplayAbilitySystem\CalculationClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\CalculationClasses\GFGameplayHCostMMC.h">
       <Filter>Source\GodForsaken\Public\GameplayAbilitySystem\CalculationClasses</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\CalculationClasses\GFGameplayMMC.h">

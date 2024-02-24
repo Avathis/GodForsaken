@@ -959,8 +959,14 @@ void EmptyLinkFunctionForGeneratedCodeGFCharacter() {}
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGFCharacter_Statics::NewProp_CharacterStatusBar_MetaData[] = {
 		{ "Category", "Components" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//virtual void GetOwnedGameplayTags(FGameplayTagContainer& TagContainer) const override;\n" },
+#endif
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/BaseClasses/Characters/GFCharacter.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "virtual void GetOwnedGameplayTags(FGameplayTagContainer& TagContainer) const override;" },
+#endif
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGFCharacter_Statics::NewProp_CharacterStatusBar = { "CharacterStatusBar", nullptr, (EPropertyFlags)0x001000000008000d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGFCharacter, CharacterStatusBar), Z_Construct_UClass_UWidgetComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AGFCharacter_Statics::NewProp_CharacterStatusBar_MetaData), Z_Construct_UClass_AGFCharacter_Statics::NewProp_CharacterStatusBar_MetaData) };
@@ -1029,9 +1035,9 @@ void EmptyLinkFunctionForGeneratedCodeGFCharacter() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Characters_GFCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AGFCharacter, AGFCharacter::StaticClass, TEXT("AGFCharacter"), &Z_Registration_Info_UClass_AGFCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGFCharacter), 326430563U) },
+		{ Z_Construct_UClass_AGFCharacter, AGFCharacter::StaticClass, TEXT("AGFCharacter"), &Z_Registration_Info_UClass_AGFCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGFCharacter), 1690547744U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Characters_GFCharacter_h_1241227315(TEXT("/Script/GodForsaken"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Characters_GFCharacter_h_3773579272(TEXT("/Script/GodForsaken"),
 		Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Characters_GFCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_GameProjects_GodForsaken_GodForsaken_Source_GodForsaken_Public_BaseClasses_Characters_GFCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

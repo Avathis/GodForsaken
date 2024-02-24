@@ -1,0 +1,14 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-GodForsaken-5227.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\GameProjects\GodForsaken\GodForsaken\Intermediate\Build\Win64\x64\GodForsakenEditor\Development\Engine\SharedPCH.Engine.Cpp20.h.obj"
+"C:\GameProjects\GodForsaken\GodForsaken\Intermediate\Build\Win64\x64\UnrealEditor\Development\GodForsaken\Module.GodForsaken.cpp.obj"
+"C:\GameProjects\GodForsaken\GodForsaken\Intermediate\Build\Win64\x64\UnrealEditor\Development\GodForsaken\GFGameplayCueNotify_Burst.cpp.obj"
+"C:\GameProjects\GodForsaken\GodForsaken\Intermediate\Build\Win64\x64\UnrealEditor\Development\GodForsaken\GFGameplayCueNotify_Looping.cpp.obj"
+"C:\GameProjects\GodForsaken\GodForsaken\Intermediate\Build\Win64\x64\UnrealEditor\Development\GodForsaken\Default.rc2.res"
+/OUT:"C:\GameProjects\GodForsaken\GodForsaken\Intermediate\Build\Win64\x64\UnrealEditor\Development\GodForsaken\UnrealEditor-GodForsaken-5227.lib"

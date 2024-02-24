@@ -3,6 +3,7 @@
 
 #include "GameplayAbilitySystem/GFGameplayCueNotify_Burst.h"
 
+#include "GameplayAbilitySystem/GFAbilityTypes.h"
 #include "GameplayAbilitySystem/GFGameplayCueSourceObject.h"
 
 
@@ -19,11 +20,23 @@ UGFGameplayCueNotify_Burst::UGFGameplayCueNotify_Burst()
 void UGFGameplayCueNotify_Burst::HandleGameplayCue(AActor* MyTarget, EGameplayCueEvent::Type EventType,
 	const FGameplayCueParameters& Parameters)
 {
+	const FGFGameplayEffectContext* EffectContext = static_cast<const FGFGameplayEffectContext*>(Parameters.EffectContext.Get());
+	if(EffectContext)
+	{
+		FName Socket = EffectContext->GetSourceSocket();
+		if(!Socket.IsNone())
+		{
+			DefaultPlacementInfo.SocketName = EffectContext->GetSourceSocket();
+		}
+	}
+
+	/*
 	const UGFGameplayCueSourceObject* Object = Cast<UGFGameplayCueSourceObject>(Parameters.SourceObject.Get());
 	if(Object)
 	{
 		DefaultPlacementInfo.SocketName = Object->SocketName;
 	}
+	*/
 
 	Super::HandleGameplayCue(MyTarget, EventType, Parameters);
 }

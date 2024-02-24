@@ -94,7 +94,16 @@ void AGFCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
 }
-
+/*
+void AGFCharacter::GetOwnedGameplayTags(FGameplayTagContainer& TagContainer) const
+{
+	if(AbilitySystemComponent)
+	{
+		AbilitySystemComponent->GetOwnedGameplayTags(TagContainer);
+	}
+	
+}
+*/
 float AGFCharacter::GetHealth() const
 {
 	if(AttributeSet)

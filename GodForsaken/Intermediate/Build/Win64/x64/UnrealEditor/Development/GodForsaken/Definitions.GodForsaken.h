@@ -1,4 +1,4 @@
-#include "C:/GameProjects/GodForsaken/GodForsaken/Intermediate/Build/Win64/x64/GodForsakenEditor/Development/Engine/SharedDefinitions.Engine.Cpp20.h"
+#include "C:/GameProjects/GodForsaken/GodForsaken/Intermediate/Build/Win64/x64/GodForsakenEditor/Development/UnrealEd/SharedDefinitions.UnrealEd.Cpp20.h"
 #undef UE_IS_ENGINE_MODULE
 #undef DEPRECATED_FORGAME
 #define DEPRECATED_FORGAME DEPRECATED
@@ -28,5 +28,9 @@
 #define DATAREGISTRY_API DLLIMPORT
 #define ENHANCEDINPUT_API DLLIMPORT
 #define TARGETINGSYSTEM_API DLLIMPORT
+#define WITH_GAMEPLAY_DEBUGGER_CORE 1
+#define WITH_GAMEPLAY_DEBUGGER 1
+#define WITH_GAMEPLAY_DEBUGGER_MENU 1
+#define AIMODULE_API DLLIMPORT
 #define GODFORSAKEN_API DLLEXPORT
 #define MOTIONWARPING_API DLLIMPORT

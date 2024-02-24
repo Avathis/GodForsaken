@@ -17,13 +17,13 @@ void EmptyLinkFunctionForGeneratedCodeGodForsaken_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x8A2E120A,
-				0xDFC624D3,
+				0x5C9D5D1F,
+				0x77FF01A2,
 				METADATA_PARAMS(0, nullptr)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_GodForsaken.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_GodForsaken.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_GodForsaken(Z_Construct_UPackage__Script_GodForsaken, TEXT("/Script/GodForsaken"), Z_Registration_Info_UPackage__Script_GodForsaken, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x8A2E120A, 0xDFC624D3));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_GodForsaken(Z_Construct_UPackage__Script_GodForsaken, TEXT("/Script/GodForsaken"), Z_Registration_Info_UPackage__Script_GodForsaken, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x5C9D5D1F, 0x77FF01A2));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

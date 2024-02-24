@@ -14,7 +14,8 @@
 				"EnhancedInput",
 				"UMG",
 				"TargetingSystem",
-				"CoreUObject"
+				"CoreUObject",
+				"AIModule"
 			]
 		}
 	],

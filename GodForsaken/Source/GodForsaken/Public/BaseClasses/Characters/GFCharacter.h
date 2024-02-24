@@ -9,7 +9,7 @@
 #include "GFCharacter.generated.h"
 
 UCLASS()
-class GODFORSAKEN_API AGFCharacter : public ACharacter, public IAbilitySystemInterface
+class GODFORSAKEN_API AGFCharacter : public ACharacter, public IAbilitySystemInterface//, public IGameplayTagAssetInterface
 {
 	GENERATED_BODY()
 
@@ -60,6 +60,8 @@ public:
 	{
 		return AbilitySystemComponent;
 	}
+
+	//virtual void GetOwnedGameplayTags(FGameplayTagContainer& TagContainer) const override;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
 	class UWidgetComponent* CharacterStatusBar;
