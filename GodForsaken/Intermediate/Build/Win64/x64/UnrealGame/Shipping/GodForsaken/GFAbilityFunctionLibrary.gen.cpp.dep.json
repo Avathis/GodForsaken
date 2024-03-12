@@ -1,0 +1,26 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\gameprojects\\godforsaken\\godforsaken\\intermediate\\build\\win64\\unrealgame\\inc\\godforsaken\\uht\\gfabilityfunctionlibrary.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\gameprojects\\godforsaken\\godforsaken\\intermediate\\build\\win64\\x64\\godforsaken\\shipping\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\gameprojects\\godforsaken\\godforsaken\\intermediate\\build\\win64\\x64\\unrealgame\\shipping\\godforsaken\\definitions.godforsaken.h",
+            "c:\\gameprojects\\godforsaken\\godforsaken\\source\\godforsaken\\public\\gameplayabilitysystem\\gfabilityfunctionlibrary.h",
+            "c:\\gameprojects\\godforsaken\\godforsaken\\intermediate\\build\\win64\\unrealgame\\inc\\godforsaken\\uht\\gfabilityfunctionlibrary.generated.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\plugins\\runtime\\gameplayabilities\\source\\gameplayabilities\\public\\gameplayeffecttypes.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\plugins\\runtime\\gameplayabilities\\source\\gameplayabilities\\public\\activegameplayeffecthandle.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\plugins\\runtime\\gameplayabilities\\intermediate\\build\\win64\\unrealgame\\inc\\gameplayabilities\\uht\\activegameplayeffecthandle.generated.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\plugins\\runtime\\gameplayabilities\\source\\gameplayabilities\\public\\gameplayeffectattributecapturedefinition.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\plugins\\runtime\\gameplayabilities\\source\\gameplayabilities\\public\\attributeset.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\plugins\\runtime\\gameplayabilities\\intermediate\\build\\win64\\unrealgame\\inc\\gameplayabilities\\uht\\attributeset.generated.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\plugins\\runtime\\gameplayabilities\\intermediate\\build\\win64\\unrealgame\\inc\\gameplayabilities\\uht\\gameplayeffectattributecapturedefinition.generated.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\gameplaytags\\classes\\gameplaytagcontainer.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\core\\public\\misc\\comparisonutility.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\gameplaytags\\uht\\gameplaytagcontainer.generated.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\plugins\\runtime\\gameplayabilities\\intermediate\\build\\win64\\unrealgame\\inc\\gameplayabilities\\uht\\gameplayeffecttypes.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

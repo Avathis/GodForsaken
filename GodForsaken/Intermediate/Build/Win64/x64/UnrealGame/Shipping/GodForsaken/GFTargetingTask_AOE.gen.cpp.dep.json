@@ -1,0 +1,23 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\gameprojects\\godforsaken\\godforsaken\\intermediate\\build\\win64\\unrealgame\\inc\\godforsaken\\uht\\gftargetingtask_aoe.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\gameprojects\\godforsaken\\godforsaken\\intermediate\\build\\win64\\x64\\godforsaken\\shipping\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\gameprojects\\godforsaken\\godforsaken\\intermediate\\build\\win64\\x64\\unrealgame\\shipping\\godforsaken\\definitions.godforsaken.h",
+            "c:\\gameprojects\\godforsaken\\godforsaken\\source\\godforsaken\\public\\gameplayabilitysystem\\abilitytasks\\gftargetingtask_aoe.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\plugins\\runtime\\gameplayabilities\\source\\gameplayabilities\\public\\scalablefloat.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\plugins\\runtime\\dataregistry\\source\\dataregistry\\public\\dataregistryid.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\plugins\\runtime\\dataregistry\\intermediate\\build\\win64\\unrealgame\\inc\\dataregistry\\uht\\dataregistryid.generated.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\plugins\\runtime\\gameplayabilities\\intermediate\\build\\win64\\unrealgame\\inc\\gameplayabilities\\uht\\scalablefloat.generated.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\plugins\\experimental\\gameplaytargetingsystem\\source\\gameplaytargetingsystem\\tasks\\targetingtask.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\plugins\\experimental\\gameplaytargetingsystem\\source\\gameplaytargetingsystem\\types\\targetingsystemtypes.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\plugins\\experimental\\gameplaytargetingsystem\\intermediate\\build\\win64\\unrealgame\\inc\\targetingsystem\\uht\\targetingsystemtypes.generated.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\plugins\\experimental\\gameplaytargetingsystem\\intermediate\\build\\win64\\unrealgame\\inc\\targetingsystem\\uht\\targetingtask.generated.h",
+            "c:\\gameprojects\\godforsaken\\godforsaken\\intermediate\\build\\win64\\unrealgame\\inc\\godforsaken\\uht\\gftargetingtask_aoe.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

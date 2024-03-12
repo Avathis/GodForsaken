@@ -32,6 +32,8 @@ public:
 	UFUNCTION(BlueprintImplementableEvent)
 	void InitializeAbilities();
 
+	virtual void FinalizeDeath() override;
+
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components", meta = (AllowPrivateAccess = "true"))
 	class UGFSpringArmComponent* SpringArmComponent;

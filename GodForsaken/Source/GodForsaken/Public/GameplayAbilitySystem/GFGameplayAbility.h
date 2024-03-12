@@ -96,6 +96,9 @@ public:
 	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Cost")
 	FScalableFloat Cost;
 
+	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Cost")
+	FScalableFloat Poise;
+
 protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	EGFAbilityActivationPolicy ActivationPolicy;

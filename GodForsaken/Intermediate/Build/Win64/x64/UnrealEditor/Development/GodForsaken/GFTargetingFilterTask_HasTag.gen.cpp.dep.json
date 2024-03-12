@@ -1,0 +1,24 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\gameprojects\\godforsaken\\godforsaken\\intermediate\\build\\win64\\unrealeditor\\inc\\godforsaken\\uht\\gftargetingfiltertask_hastag.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\gameprojects\\godforsaken\\godforsaken\\intermediate\\build\\win64\\x64\\godforsakeneditor\\development\\unrealed\\sharedpch.unrealed.cpp20.h.pch",
+        "Includes": [
+            "c:\\gameprojects\\godforsaken\\godforsaken\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\godforsaken\\definitions.godforsaken.h",
+            "c:\\gameprojects\\godforsaken\\godforsaken\\source\\godforsaken\\public\\gameplayabilitysystem\\abilitytasks\\gftargetingfiltertask_hastag.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\gameplaytags\\classes\\gameplaytagcontainer.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\core\\public\\misc\\comparisonutility.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplaytags\\uht\\gameplaytagcontainer.generated.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\plugins\\experimental\\gameplaytargetingsystem\\source\\gameplaytargetingsystem\\tasks\\targetingfiltertask_basicfiltertemplate.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\plugins\\experimental\\gameplaytargetingsystem\\source\\gameplaytargetingsystem\\tasks\\targetingtask.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\plugins\\experimental\\gameplaytargetingsystem\\source\\gameplaytargetingsystem\\types\\targetingsystemtypes.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\plugins\\experimental\\gameplaytargetingsystem\\intermediate\\build\\win64\\unrealeditor\\inc\\targetingsystem\\uht\\targetingsystemtypes.generated.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\plugins\\experimental\\gameplaytargetingsystem\\intermediate\\build\\win64\\unrealeditor\\inc\\targetingsystem\\uht\\targetingtask.generated.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\plugins\\experimental\\gameplaytargetingsystem\\intermediate\\build\\win64\\unrealeditor\\inc\\targetingsystem\\uht\\targetingfiltertask_basicfiltertemplate.generated.h",
+            "c:\\gameprojects\\godforsaken\\godforsaken\\intermediate\\build\\win64\\unrealeditor\\inc\\godforsaken\\uht\\gftargetingfiltertask_hastag.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

@@ -18,5 +18,8 @@ public:
 	
 	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable)
 	void SetHealthPercentage(float HealthPercentage);
+
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable)
+	void SetPoisePercentage(float PoisePercentage);
 	
 };

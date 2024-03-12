@@ -24,6 +24,12 @@ class GODFORSAKEN_API UGFAttributeSet : public UAttributeSet
 public:
 	UGFAttributeSet();
 
+	virtual void PostGameplayEffectExecute(const FGameplayEffectModCallbackData& Data) override;
+
+	virtual void PreAttributeChange(const FGameplayAttribute& Attribute, float& NewValue) override;
+
+	virtual void PreAttributeBaseChange(const FGameplayAttribute& Attribute, float& NewValue) const override;
+
 	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category = "Health")
 	FGameplayAttributeData Health;
 	ATTRIBUTE_ACCESSORS(UGFAttributeSet, Health);
@@ -79,6 +85,16 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Constitution")
 	FGameplayAttributeData Armor;
 	ATTRIBUTE_ACCESSORS(UGFAttributeSet, Armor);
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Constitution")
+	FGameplayAttributeData Poise;
+	ATTRIBUTE_ACCESSORS(UGFAttributeSet, Poise);
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Constitution")
+	FGameplayAttributeData MaxPoise;
+	ATTRIBUTE_ACCESSORS(UGFAttributeSet, MaxPoise);
+
+	
 
 	
 };

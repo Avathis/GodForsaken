@@ -1,0 +1,13 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\gameprojects\\godforsaken\\godforsaken\\intermediate\\build\\win64\\unrealgame\\inc\\godforsaken\\uht\\godforsaken.init.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\gameprojects\\godforsaken\\godforsaken\\intermediate\\build\\win64\\x64\\godforsaken\\shipping\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\gameprojects\\godforsaken\\godforsaken\\intermediate\\build\\win64\\x64\\unrealgame\\shipping\\godforsaken\\definitions.godforsaken.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

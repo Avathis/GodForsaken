@@ -4,6 +4,7 @@
 #include "BaseClasses/Characters/GFCharacter.h"
 #include "MotionWarpingComponent.h"
 #include "BaseClasses/Components/GFCharacterMovementComponent.h"
+#include "Components/CapsuleComponent.h"
 #include "Components/WidgetComponent.h"
 #include "GameplayAbilitySystem/GFAttributeSet.h"
 #include "GameplayAbilitySystem/GFGameplayAbility.h"
@@ -49,6 +50,8 @@ void AGFCharacter::BeginPlay()
 		MaxSpecialChangedDelegateHandle = AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetMaxSpecialAttribute()).AddUObject(this, &ThisClass::MaxSpecialChanged);
 		SpeedChangedDelegateHandle = AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetSpeedAttribute()).AddUObject(this, &ThisClass::SpeedChanged);
 		MaxSpeedChangedDelegateHandle = AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetMaxSpeedAttribute()).AddUObject(this, &ThisClass::MaxSpeedChanged);
+		PoiseChangedDelegateHandle = AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetPoiseAttribute()).AddUObject(this, &ThisClass::PoiseChanged);
+		MaxPoiseChangedDelegateHandle = AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AttributeSet->GetMaxPoiseAttribute()).AddUObject(this, &ThisClass::MaxPoiseChanged);
 	}
 	
 	if(IsPlayerControlled())
@@ -138,6 +141,19 @@ float AGFCharacter::GetHealthRegenRate() const
 	{
 		return 0.f;
 	}
+}
+
+void AGFCharacter::InitiateDeath()
+{
+	GetCapsuleComponent()->SetCollisionResponseToChannel(ECollisionChannel::ECC_Pawn, ECollisionResponse::ECR_Ignore);
+	AbilitySystemComponent->AddLooseGameplayTag(FGameplayTag::RequestGameplayTag(TEXT("State.Death")));
+	//AbilitySystemComponent->CancelAbilities(FGameplayTagContainer());
+	GetWorld()->GetTimerManager().SetTimer(DeathTimerHandle,this, &AGFCharacter::FinalizeDeath,TimeToDie, false);
+}
+
+void AGFCharacter::FinalizeDeath()
+{
+	Destroy();
 }
 
 float AGFCharacter::GetEnergy() const
@@ -272,6 +288,15 @@ float AGFCharacter::GetSpecialPercentage()
 	return 1.f;
 }
 
+float AGFCharacter::GetPoisePercentage()
+{
+	if(AttributeSet)
+	{
+		return UKismetMathLibrary::SafeDivide(AttributeSet->GetPoise(),AttributeSet->GetMaxPoise());
+	}
+	return 1.f;
+}
+
 float AGFCharacter::GetSpeed() const
 {
 	if(AttributeSet)
@@ -308,6 +333,45 @@ float AGFCharacter::GetArmor() const
 	}
 }
 
+float AGFCharacter::GetPoise() const
+{
+	if(AttributeSet)
+	{
+		return AttributeSet->GetPoise();
+	}
+	else
+	{
+		return 0.f;
+	}
+}
+
+float AGFCharacter::GetMaxPoise()
+{
+	if(AttributeSet)
+	{
+		return AttributeSet->GetMaxPoise();
+	}
+	else
+	{
+		return 0.f;
+	}
+}
+
+void AGFCharacter::PoiseChanged(const FOnAttributeChangeData& Data)
+{
+	if(CharacterStatusBar)
+	{
+		if(Widget)
+		{
+			Widget->SetPoisePercentage(GetPoisePercentage());
+		}
+	}
+}
+
+void AGFCharacter::MaxPoiseChanged(const FOnAttributeChangeData& Data)
+{
+}
+
 void AGFCharacter::ArmorChanged(const FOnAttributeChangeData& Data)
 {
 	
@@ -321,6 +385,10 @@ void AGFCharacter::HealthChanged(const FOnAttributeChangeData& Data)
 		{
 			Widget->SetHealthPercentage(GetHealthPercentage());
 		}
+	}
+	if(Data.NewValue <= 0.f)
+	{
+		InitiateDeath();
 	}
 }
 

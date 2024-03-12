@@ -163,6 +163,9 @@
     <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\GFGameplayCueNotify_Burst.cpp">
       <Filter>Source\GodForsaken\Private\GameplayAbilitySystem</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\GFGameplayCueNotify_BurstLatent.cpp">
+      <Filter>Source\GodForsaken\Private\GameplayAbilitySystem</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\GFGameplayCueNotify_Looping.cpp">
       <Filter>Source\GodForsaken\Private\GameplayAbilitySystem</Filter>
     </ClCompile>
@@ -172,6 +175,9 @@
     <Filter Include="Source\GodForsaken\Private\GameplayAbilitySystem\AbilityTasks">
       <UniqueIdentifier>{63BF7C7C-30F0-336B-8687-346A9625FF15}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\AbilityTasks\GFTargetingFilterTask_HasTag.cpp">
+      <Filter>Source\GodForsaken\Private\GameplayAbilitySystem\AbilityTasks</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\AbilityTasks\GFTargetingTask_AOE.cpp">
       <Filter>Source\GodForsaken\Private\GameplayAbilitySystem\AbilityTasks</Filter>
     </ClCompile>
@@ -188,6 +194,9 @@
       <Filter>Source\GodForsaken\Private\GameplayAbilitySystem\CalculationClasses</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\CalculationClasses\GFGameplayMMC.cpp">
+      <Filter>Source\GodForsaken\Private\GameplayAbilitySystem\CalculationClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\CalculationClasses\GFGameplayPoiseMMC.cpp">
       <Filter>Source\GodForsaken\Private\GameplayAbilitySystem\CalculationClasses</Filter>
     </ClCompile>
     <Filter Include="Source\GodForsaken\Private\Player">
@@ -298,6 +307,9 @@
     <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\GFGameplayCueNotify_Burst.h">
       <Filter>Source\GodForsaken\Public\GameplayAbilitySystem</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\GFGameplayCueNotify_BurstLatent.h">
+      <Filter>Source\GodForsaken\Public\GameplayAbilitySystem</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\GFGameplayCueNotify_Looping.h">
       <Filter>Source\GodForsaken\Public\GameplayAbilitySystem</Filter>
     </ClInclude>
@@ -307,6 +319,9 @@
     <Filter Include="Source\GodForsaken\Public\GameplayAbilitySystem\AbilityTasks">
       <UniqueIdentifier>{5B972E3D-C55C-3DAF-835D-7D6E4E292F43}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\AbilityTasks\GFTargetingFilterTask_HasTag.h">
+      <Filter>Source\GodForsaken\Public\GameplayAbilitySystem\AbilityTasks</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\AbilityTasks\GFTargetingTask_AOE.h">
       <Filter>Source\GodForsaken\Public\GameplayAbilitySystem\AbilityTasks</Filter>
     </ClInclude>
@@ -323,6 +338,9 @@
       <Filter>Source\GodForsaken\Public\GameplayAbilitySystem\CalculationClasses</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\CalculationClasses\GFGameplayMMC.h">
+      <Filter>Source\GodForsaken\Public\GameplayAbilitySystem\CalculationClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\CalculationClasses\GFGameplayPoiseMMC.h">
       <Filter>Source\GodForsaken\Public\GameplayAbilitySystem\CalculationClasses</Filter>
     </ClInclude>
     <Filter Include="Source\GodForsaken\Public\Player">

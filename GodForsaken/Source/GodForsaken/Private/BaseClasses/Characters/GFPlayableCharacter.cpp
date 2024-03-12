@@ -7,6 +7,7 @@
 #include "BaseClasses/Input/GFEnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
 #include "BaseClasses/Components/GFCharacterMovementComponent.h"
+#include "Kismet/GameplayStatics.h"
 #include "Player/GFPlayerController.h"
 
 AGFPlayableCharacter::AGFPlayableCharacter(const FObjectInitializer& ObjectInitializer) :Super(ObjectInitializer.SetDefaultSubobjectClass<UGFCharacterMovementComponent>(ACharacter::CharacterMovementComponentName))
@@ -56,6 +57,12 @@ void AGFPlayableCharacter::BeginPlay()
 		PlayerController->SetStaminaPercentage(GetStaminaPercentage());
 	}
 	
+}
+
+void AGFPlayableCharacter::FinalizeDeath()
+{
+	Super::FinalizeDeath();
+	UGameplayStatics::OpenLevel(this, FName("ThirdPersonMap"));
 }
 
 void AGFPlayableCharacter::BindASCInput()

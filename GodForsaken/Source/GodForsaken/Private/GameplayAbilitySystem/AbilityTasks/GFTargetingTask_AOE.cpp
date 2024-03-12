@@ -408,6 +408,10 @@ bool UGFTargetingTask_AOE::CanEditChange(const FProperty* InProperty) const
 	return true;
 }
 #endif
+
+#if ENABLE_DRAW_DEBUG
+
+
 void UGFTargetingTask_AOE::DrawDebug(UTargetingSubsystem* TargetingSubsystem, FTargetingDebugInfo& Info,
 	const FTargetingRequestHandle& TargetingHandle, float XOffset, float YOffset, int32 MinTextRowsToAdvance) const
 {
@@ -465,6 +469,7 @@ void UGFTargetingTask_AOE::ResetDebugString(const FTargetingRequestHandle& Targe
 	ScratchPadString.Reset();
 #endif
 }
+#endif 
 
 
 FVector UGFTargetingTask_AOE::GetSourceOffset_Implementation(const FTargetingRequestHandle& TargetingHandle) const

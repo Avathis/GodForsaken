@@ -254,12 +254,22 @@
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
       <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
     </ClCompile>
+    <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\GFGameplayCueNotify_BurstLatent.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
     <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\GFGameplayCueNotify_Looping.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
       <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\GFGameplayCueSourceObject.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\AbilityTasks\GFTargetingFilterTask_HasTag.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
       <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
@@ -285,6 +295,11 @@
       <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\CalculationClasses\GFGameplayMMC.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GodForsaken\Private\GameplayAbilitySystem\CalculationClasses\GFGameplayPoiseMMC.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
       <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
@@ -327,13 +342,16 @@
     <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\GFAttributeSet.h"/>
     <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\GFGameplayAbility.h"/>
     <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\GFGameplayCueNotify_Burst.h"/>
+    <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\GFGameplayCueNotify_BurstLatent.h"/>
     <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\GFGameplayCueNotify_Looping.h"/>
     <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\GFGameplayCueSourceObject.h"/>
+    <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\AbilityTasks\GFTargetingFilterTask_HasTag.h"/>
     <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\AbilityTasks\GFTargetingTask_AOE.h"/>
     <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\CalculationClasses\GFGameplayDamageEEC.h"/>
     <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\CalculationClasses\GFGameplayEffectExecCalculation.h"/>
     <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\CalculationClasses\GFGameplayHCostMMC.h"/>
     <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\CalculationClasses\GFGameplayMMC.h"/>
+    <ClInclude Include="..\..\Source\GodForsaken\Public\GameplayAbilitySystem\CalculationClasses\GFGameplayPoiseMMC.h"/>
     <ClInclude Include="..\..\Source\GodForsaken\Public\Player\GFPlayerController.h"/>
     <ClInclude Include="..\..\Source\GodForsaken\Public\UI\GFCharacterWidget.h"/>
     <ClInclude Include="..\..\Source\GodForsaken\Public\UI\GFHUDWidget.h"/>

@@ -21,6 +21,9 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	UPROPERTY(EditDefaultsOnly ,BlueprintReadOnly)
+	float TimeToDie = 5;
+
 	FDelegateHandle HealthChangedDelegateHandle;
 	FDelegateHandle MaxHealthChangedDelegateHandle;
 	FDelegateHandle HealthRegenRateChangedDelegateHandle;
@@ -35,6 +38,8 @@ protected:
 	FDelegateHandle SpeedChangedDelegateHandle;
 	FDelegateHandle MaxSpeedChangedDelegateHandle;
 	FDelegateHandle ArmorChangedDelegateHandle;
+	FDelegateHandle PoiseChangedDelegateHandle;
+	FDelegateHandle MaxPoiseChangedDelegateHandle;
 
 private:
 
@@ -71,6 +76,8 @@ public:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Components")
 	class UGFCharacterWidget* Widget;
+
+	FTimerHandle DeathTimerHandle;
 	
 	//Attribute Functions
 
@@ -82,6 +89,12 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Attributes")
 	float GetHealthRegenRate() const;
+
+	UFUNCTION(BlueprintCallable, Category = "Attributes")
+	void InitiateDeath();
+
+	UFUNCTION(BlueprintCallable, Category = "Attributes")
+	virtual void FinalizeDeath();
 
 	UFUNCTION(BlueprintCallable, Category = "Attributes")
 	float GetEnergy() const;
@@ -118,6 +131,9 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Attributes")
 	float GetSpecialPercentage();
+
+	UFUNCTION(BlueprintCallable, Category = "Attributes")
+	float GetPoisePercentage();
 	
 	UFUNCTION(BlueprintCallable, Category = "Attributes")
 	float GetSpeed() const;
@@ -127,6 +143,12 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Attributes")
 	float GetArmor() const;
+
+	UFUNCTION(BlueprintCallable, Category = "Attributes")
+	float GetPoise() const;
+
+	UFUNCTION(BlueprintCallable, Category = "Attributes")
+	float GetMaxPoise();
 
 	virtual void HealthChanged(const FOnAttributeChangeData& Data);
 	virtual void MaxHealthChanged(const FOnAttributeChangeData& Data);
@@ -142,4 +164,6 @@ public:
 	virtual void SpeedChanged(const FOnAttributeChangeData& Data);
 	virtual void MaxSpeedChanged(const FOnAttributeChangeData& Data);
 	virtual void ArmorChanged(const FOnAttributeChangeData& Data);
+	virtual void PoiseChanged(const FOnAttributeChangeData& Data);
+	virtual void MaxPoiseChanged(const FOnAttributeChangeData& Data);
 };
